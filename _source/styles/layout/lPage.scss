@@ -1,0 +1,53 @@
+.l-page {
+    display: block;
+    margin: 0 auto;
+    max-width: $containerBigWidth;
+    padding-top: 92px;
+    padding-bottom: 40px;
+
+    &.--error404,
+    &.--findUs,
+    &.--catalog {
+        padding-bottom: 0;
+    }
+    
+    &.--aboutUs {
+        @include bg(assets, 'aboutUs_bg.jpg', repeat-y, cover, inherit, top center);
+        padding: 200px 0 100px 0;
+        max-width: 100%;
+    }
+
+    &.--home {
+        .s-banner {
+            padding: 40px 0;
+        }
+    }
+
+    &.--products {
+        @media screen and (min-width: 1024px) {
+            .s-galleryProduct__head {
+                position: sticky;
+                top: 84px;
+                z-index: 2;
+                background: $white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .l-page {
+        padding-top: 69px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .l-page.--aboutUs {
+        padding-top: 69px;
+        padding-bottom: 40px;
+    }
+}
+@media screen and (max-width: 460px) {
+    .l-page {
+        padding-top: 64px;
+    }
+}

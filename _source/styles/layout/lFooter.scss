@@ -1,0 +1,126 @@
+.l-footer {
+    display: block;
+    width: 100%;
+    background: $black;
+    padding: 80px 0;
+
+    h3 {
+        @include titles($fw: $fwBold, $fs: 28px, $tc: $white);
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    p {
+        @include paragraphs($tc: $white, $fs: 16px, $ls: 0.5px);
+    }
+
+    &__content {
+        @include calcWidthForPositionNegative(-15px);
+        display: flex;
+    }
+    &__col {
+        padding: 0 15px;
+        > * {
+            margin-bottom: 30px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__brand {
+        max-width: 210px;
+    }
+    &__menu {
+        ul {
+            max-width: 300px;
+        }
+        li {
+            @include paragraphs($tc: $white, $fs: 16px);
+            padding-left: 6px;
+            position: relative;
+            margin-bottom: 6px;
+            &:before {
+                content: '';
+                display: block;
+                width: 2px;
+                height: 2px;
+                background: $white;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                margin-top: -1px;
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        .c-socialList {
+            margin-left: 30px;
+            position: relative;
+            top: -2px;
+            &:before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 14px;
+                position: absolute;
+                left: -15px;
+                top: 50%;
+                margin-top: -7px;
+                background: $white;
+            }
+        }
+    }
+    &__contact {
+        li {
+            @include paragraphs($tc: $white, $fs: 16px);
+            margin-bottom: 6px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__newsletter {
+        p {
+            padding: 5px 0 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .l-footer {
+        .u-container {
+            max-width: 800px;
+        }
+        &__content {
+            flex-wrap: wrap;
+        }
+        &__col {
+            @include flexWidth(50%);
+            margin-bottom: 60px;
+            &:last-of-type {
+                @include flexWidth(100%);
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 740px) {
+    .l-footer {
+        .u-container {
+            max-width: 100%;
+        }
+        &__col {
+            @include flexWidth(100%);
+        }
+
+        &__menu {
+            ul {
+                max-width: 100%;
+            }
+        }
+    }
+}

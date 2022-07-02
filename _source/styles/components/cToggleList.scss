@@ -1,0 +1,156 @@
+.c-toggleList {
+    margin-bottom: 10px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    &__header {
+        @include transition();
+        @include roundedAll();
+        padding: 10px 10px 10px 20px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        span {
+            font-size: 17px;
+            letter-spacing: 1px;
+            font-weight: $fwLight;
+            text-transform: uppercase;
+        }
+        > * {
+            @include transition();
+        }
+        &:after {
+            @include transition();
+            @include transforms(translateY(-50%), center);
+            content: '';
+            display: block;
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            left: 7px;
+            top: 50%;
+            background: url(#{$media_assets}caret_black_down.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    &__content {
+        @include rounded(bottom, left, $defaultRadius);
+        @include rounded(bottom, right, $defaultRadius);
+        @include transition();
+        @include u-hideElement;
+        display: block;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    &.is-active {
+        .c-toggleList__header {
+            @include rounded(bottom, left, 0);
+            @include rounded(bottom, right, 0);
+            &:after {
+                @include transforms(translateY(-50%) rotate(180deg), center);
+            }
+            span {
+                font-weight: $fwMedium;
+            }
+        }
+        .c-toggleList__content {
+            @include u-showElement;
+            overflow: auto;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            max-height: inherit;
+        }
+    }
+
+    &.--black {
+        .c-toggleList__header {
+            background: $black;
+            &:hover {
+                background: $black2;
+            }
+            > * {
+                color: $white;
+            }
+        }
+        .c-toggleList__content {
+            border-left: 2px solid $black;
+            border-right: 2px solid $black;
+            border-bottom: 2px solid $black;
+        }
+        &.is-active {
+            .c-toggleList__header {
+                background: $black3;
+                &:hover {
+                    background: $black3;
+                }
+                > * {
+                    color: $white;
+                }
+            }
+        }
+    }
+    &.--gray {
+        .c-toggleList__header {
+            background: $gray2;
+            &:hover {
+                background: $gray3;
+            }
+            > * {
+                color: $text;
+            }
+            &:after {
+                background: url(#{$media_assets}caret_black_down.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+        .c-toggleList__content {
+            border-left: 2px solid $gray2;
+            border-right: 2px solid $gray2;
+            border-bottom: 2px solid $gray2;
+        }
+        &.is-active {
+            .c-toggleList__header {
+                background: $gray3;
+                &:hover {
+                    background: $gray3;
+                }
+                > * {
+                    color: $text;
+                }
+            }
+        }
+    }
+    &.--white {
+        .c-toggleList__header {
+            background: $white;
+            > * {
+                color: $gray4;
+            }
+            &:hover {
+                background: $white3;
+                > * {
+                    color: $black;
+                }
+            }
+            &:after {
+                background: url(#{$media_assets}caret_black_down.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+        &.is-active {
+            .c-toggleList__header {
+                background: $white;
+                > * {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

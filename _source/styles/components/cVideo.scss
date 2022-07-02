@@ -1,0 +1,63 @@
+$cVideoIconSize: 140px;
+$cVideoIconPosition: $cVideoIconSize * 0.5;
+
+.c-video {
+	display: block;
+	width: 100%;
+	position: relative;
+	background: $black;
+	figure {
+		z-index: 1;
+		img {
+			@include transition();
+		}
+	}
+	i {
+		@include transition();
+		@include opacity(0.75);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 2;
+		display: block;
+		width: $cVideoIconSize;
+		margin-top: - $cVideoIconPosition;
+		margin-left: - $cVideoIconPosition;
+		img, svg {
+			@include transition();
+			display: block;
+			width: $cVideoIconSize;
+			height: $cVideoIconSize;
+			object-fit: contain;
+		}
+		svg path,
+		svg circle {
+			stroke-width: 1;
+		}
+	}
+
+	&:hover {
+		figure {
+			img {
+				@include scale(1.1, center);
+			}
+		}
+		i {
+			@include opacity(1);
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.c-video {
+		i {
+			width: $cVideoIconSize * 0.5;
+			margin-top: - $cVideoIconPosition * 0.5;
+			margin-left: - $cVideoIconPosition * 0.5;
+			img, svg {
+				width: $cVideoIconSize * 0.5;
+				height: $cVideoIconSize * 0.5;
+			}
+		}
+	}
+}

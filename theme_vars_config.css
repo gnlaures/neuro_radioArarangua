@@ -1,0 +1,37 @@
+:root {
+    /* colors */
+    --primaryLight: #ff5e1b;
+    --primary: #FF4A00;
+    --primaryDark: #e83400;
+    --secondaryLight: #1b3c87;
+    --secondary: #112C69;
+    --secondaryDark: #071942;
+    --white: #fff;
+    --white2: #F5F7FA;
+    --white3: #f2f2f2;
+    --gray: #D7D7D7;
+    --gray2: #b9b9be;
+    --gray3: #848484;
+    --gray4: #5f5f5f;
+    --black: #000000;
+    --black2: #191919;
+    --black3: #2d2d2d;
+    --wppPrimary: #03BF56;
+    --wppSecondary: #02AB4D;
+    --feedbackSuccess: #000;
+    --feedbackLoad: #5f5f5f;
+    --feedbackError: #f05555;
+    --text: #323F4B;
+    --textLight: #6F6F6E;
+    --placeholderText: rgba(78, 78, 78, 0.75);
+
+    /* sizes */
+    --containerPadding: 20px;
+    --containerWidth: 1210px;
+    --containerBigWidth: 1440px;
+    --maxRowWidth: 1700px;
+    --defaultRadius: 10px;
+
+    /* fonts */
+    --fontFamily__default: 'Open Sans', sans-serif;
+}

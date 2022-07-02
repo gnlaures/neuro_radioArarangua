@@ -1,0 +1,43 @@
+.c-contactList {
+	margin-bottom: 40px;
+	padding-top: 20px;
+	> ul > li {
+		margin-bottom: 30px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		width: fit-content;
+		> i {
+			@include flexWidth(35px);
+			* {
+				display: block;
+				width: 100%;
+			}
+		}
+		> div {
+			padding-left: 15px;
+			p {
+				@include paragraphs();
+				margin-bottom: 8px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	a.c-contactList__item {
+		&:hover {
+			> div {
+				* {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

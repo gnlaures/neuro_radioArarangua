@@ -1,0 +1,100 @@
+.c-plainText {
+	figure {
+		@include roundedAll(5px);
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	p {
+		@include paragraphs($tc: $black);
+		letter-spacing: 0.25px;
+	}
+	ol, ul {
+		li {
+			display: list-item;
+			list-style-position: inside;
+			@include paragraphs($tc: $black);
+			letter-spacing: 0.25px;
+			@include mbElement(5px);
+		}
+	}
+	ol {
+		li {
+			list-style-type: decimal-leading-zero;
+		}
+	}
+	ul {
+		li {
+			list-style-type: disc;
+		}
+	}
+	blockquote {
+		@include roundedAll(5px);
+		@include paragraphs($fs: 22px, $fw: $fwLight);
+		display: block;
+		width: 100%;
+		padding: $containerPadding;
+		background: $white3;
+		font-style: italic;
+		text-align: center;
+		position: relative;
+		&:before {
+			content: '"';
+			display: block;
+			position: absolute;
+			top: -5px;
+			left: 5px;
+			font-family: $fontFamily__serif;
+			font-size: 60px;
+			color: $gray2;
+		}
+	}
+	h1 {
+		@include titles($fs: 36px, $tc: $black);
+	}
+	h2 {
+		@include titles($fs: 32px);
+	}
+	h3 {
+		@include titles($fs: 28px);
+	}
+	h4 {
+		@include titles($fs: 24px);
+	}
+	h5 {
+		@include titles($fs: 22px);
+	}
+	h6 {
+		@include titles($fs: 20px);
+	}
+
+	&.--withPaddings {
+		> * {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		> figure {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.c-plainText {
+		&.--withPaddings {
+			> * {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			> blockquote {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}

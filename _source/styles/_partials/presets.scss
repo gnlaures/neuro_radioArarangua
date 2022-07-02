@@ -1,0 +1,114 @@
+@mixin paragraphs (
+    $tc: $text,
+    $fw: $fwLight,
+    $fs: 18px,
+    $lh: 1.4,
+    $ls: 1.5px,
+    $important: false
+) {
+    color: $tc is-important($important);
+    font-size: $fs is-important($important);
+    font-weight: $fw is-important($important);
+    line-height: $lh is-important($important);
+    letter-spacing: $ls;
+    strong, b {
+        font-weight: $fwBold;
+        color: $tc;
+        font-size: $fs;
+        line-height: $lh;
+    }
+    u {
+        text-decoration: underline;
+    }
+    i {
+        font-style: italic;
+    }
+    a {
+        color: $tc;
+        text-decoration: none;
+        font-weight: $fw;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @media screen and (max-width: 430px) {
+        font-size: $fs - 2;
+        a, strong {
+            font-size: $fs - 2;
+        }
+    }
+}
+
+@mixin labels (
+    $tc: $text,
+    $fs: 12px,
+    $important: false
+) {
+    color: $tc is-important($important);
+    font-size: $fs is-important($important);
+    line-height: 1.2 is-important($important);
+    font-weight: $fwBold is-important($important);
+    a {
+        color: $tc is-important($important);
+        font-size: $fs is-important($important);
+        line-height: 1.2 is-important($important);
+        font-weight: $fwBold is-important($important);
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@mixin titles($arrow: false, $fs: 30px, $tc: $text, $fw: $fwExtraLight) {
+    display: block;
+    font-weight: $fw;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: $fs;
+    color: $tc;
+    position: relative;
+    @if $arrow {
+        padding-left: 20px;
+        &:before {
+            content: '>';
+            display: block;
+            font-weight: $fwExtraLight;
+            font-size: 30px;
+            color: $text;
+            position: absolute;
+            top: -4px;
+            left: 0;
+        }
+    }
+}
+@mixin titlesSerif($fs: 55px, $tc: $white) {
+    font-family: $fontFamily__serif;
+    font-size: $fs;
+    color: $tc;
+    font-weight: $fwBold;
+    position: relative;
+    padding-bottom: 50px;
+    span {
+        display: block;
+        font-size: $fs + 15;
+        font-family: $fontFamily__serif;
+        font-weight: $fwBold;
+    }
+    &:before {
+        content: '';
+        display: block;
+        width: 65px;
+        height: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $white;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: $fs - 25px;
+        span {
+            font-size: $fs - 5px
+        }
+    }
+}

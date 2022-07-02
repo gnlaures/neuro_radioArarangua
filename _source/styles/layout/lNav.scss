@@ -1,0 +1,220 @@
+.l-nav {
+    @include transition();
+    display: block;
+    width: 100%;
+    max-width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    &__main {
+        @include transition();
+        display: block;
+        background: $white;
+        border-bottom: 1px solid $gray;
+        padding: 12px 0;
+        .u-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__brand {
+        @include flexWidth(187px);
+        display: block;
+        a, img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-left: 30px;
+    }
+    &__search {
+        @include flexWidth(145px);
+        padding-right: 15px;
+    }
+    &__lang {
+        @include flexWidth(18px);
+        position: relative;
+        z-index: 2;
+    }
+    &__menu {
+        @include flexWidth(100%);
+        display: block;
+        padding-top: 15px;
+        position: relative;
+        z-index: 1;
+        .c-smartMenu {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__hamburguer {
+        display: none;
+    }
+
+    &.is-middle {}
+    &.is-scrolled {
+        .l-nav__main {
+            padding: 8px 0;
+        }
+    }
+    &.is-hidden {
+        // top: -180px;
+    }
+}
+.l-navMobile {
+    @include u-hideElement;
+    @include transition();
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    &__mask {
+        @include transition($duration: 150ms);
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(0,0,0,0.5);
+    }
+    &__content {
+        @include transition($delay: 50ms, $duration: 280ms);
+        @include scroll($bg: $white3, $bar: $gray2);
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 100vh;
+        background: $white;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        overflow: auto;
+        padding: 30px 30px 90px 30px;
+        &.--left {
+            left: -500px;
+        }
+        &.--right {
+            right: -500px;
+        }
+    }
+
+    &__hero {
+        > div {
+            margin-bottom: 45px;
+        }
+    }
+    &__menu {
+        .c-smartMenu {
+            > ul > li {
+                margin-bottom: 10px;
+                > a {
+                    &:hover {
+                        &:after {
+                            background: transparent;
+                        }
+                    }
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__search,
+    &__lang {
+        display: none;
+        width: 100%;
+    }
+
+    &__close {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+    }
+
+    &.is-active {
+        @include u-showElement;
+        .l-navMobile__content {
+            @include opacity(1);
+            &.--left {
+                left: 0;
+            }
+            &.--right {
+                right: 0;
+            }
+        }
+    }
+}
+
+// hide menu and show hamburuger
+@media screen and (max-width: 980px) {
+    .l-nav {
+        &__main {
+            padding: 20px 0;
+        }
+        &__menu {
+            display: none;
+        }
+        &__hamburguer {
+            display: block;
+            padding-left: 15px;
+            margin-left: 15px;
+            border-left: 1px solid $gray;
+        }
+    }
+}
+// hide search & languages
+@media screen and (max-width: 520px) {
+    .l-nav {
+        &__search {
+            display: none;
+        }
+        &__lang {
+            display: none;
+        }
+        &__hamburguer {
+            padding-left: 0;
+            margin-left: 0;
+            border-left: 0;
+        }
+    }
+    .l-navMobile {
+        &__search {
+            display: block;
+        }
+        &__lang {
+            display: block;
+        }
+    }
+}
+// resize brand
+@media screen and (max-width: 460px) {
+    .l-nav {
+        &__main {
+            padding: 20px 0;
+        }
+        &__brand {
+            @include flexWidth(150px);
+        }
+    }
+}

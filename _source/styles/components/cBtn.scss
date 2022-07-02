@@ -1,0 +1,206 @@
+// c-btn
+$btn_maxWidth: 220px;
+$btn_height: 40px;
+$btn_heightSmall: 30px;
+$btn_padding: 0 15px;
+$btn_paddingSmall: 0 10px;
+$btn_paddingBig: 0 20px;
+$btn_radius: 0;
+$btn_iconSize: 16px;
+$btn_text_fontSize: 14px;
+$btn_text_fontWeight: $fwLight;
+
+.c-btn {
+    @include transition();
+    @include roundedAll($btn_radius);
+    display: block;
+    width: 100%;
+    max-width: $btn_maxWidth;
+    height: $btn_height;
+    padding: $btn_padding;
+    line-height: 1.1;
+    font-size: $btn_text_fontSize;
+    font-weight: $btn_text_fontWeight;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+
+    // colors modifiers
+    &.--black {
+        background: $black;
+        color: $white;
+        &:hover {
+            background: $black3;
+        }
+    }
+    &.--white {
+        background: $white;
+        color: $text;
+        &:hover {
+            background: $white2;
+            color: $black2;
+        }
+    }
+    &.--gray {
+        background: $gray;
+        color: $black;
+        &:hover {
+            background: $gray2;
+        }
+    }
+    &.--disabled {
+        pointer-events: none;
+        background: $gray3;
+        color: $gray2;
+    }
+
+    // size modifiers
+    &.--small {
+        padding: $btn_paddingSmall;
+        height: $btn_heightSmall;
+        line-height: $btn_heightSmall;
+    }
+    &.--big {
+        height: $btn_height + 20px;
+        line-height: $btn_height + 20px;
+        padding: $btn_paddingBig;
+        text-transform: uppercase;
+        font-weight: $fwBold;
+        font-size: 18px;
+    }
+
+    // stroke
+    &.--stroke {
+        background: transparent;
+        border: 1px solid;
+        line-height: $btn_height - 2px;
+        &.--black {
+            border-color: $black;
+            color: $black;
+            &:hover {
+                border-color: $black2;
+                color: $white;
+            }
+        }
+        &.--white {
+            border-color: $white;
+            color: $white;
+            &:hover {
+                border-color: $white2;
+                color: $black2;
+            }
+        }
+        &.--gray {
+            border-color: $gray;
+            color: $text;
+            &:hover {
+                border-color: $black;
+                background: $black;
+                color: $white;
+            }
+        }
+        &.--disabled {
+            border-color: $gray3;
+            color: $gray2;
+        }
+    }
+
+    // with icon
+    &.--icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        i {
+            display: block;
+            width: $btn_iconSize;
+            height: $btn_iconSize;
+            svg, img {
+                display: block;
+                width: $btn_iconSize;
+                height: $btn_iconSize;
+                object-fit: contain;
+                object-position: center;
+                path {
+                    @include transition();
+                }
+            }
+        }
+        span {
+            padding-left: 8px;
+            font-size: $btn_text_fontSize;
+            font-weight: $btn_text_fontWeight;
+        }
+        &.--black {
+            svg path {
+                fill: $white;
+            }
+        }
+        &.--gray {
+            svg path {
+                fill: $text;
+            }
+        }
+        &.--disabled {
+            svg path {
+                fill: $gray2;
+            }
+        }
+        &.--white {
+            svg path {
+                fill: $text;
+            }
+        }
+
+        &.--inverse {
+            i {
+                order: 2;
+            }
+            span {
+                padding-left: 0;
+                padding-right: 8px;
+                order: 1;
+            }
+        }
+    }
+
+    // stroke with icon
+    &.--icon.--stroke {
+        &.--black {
+            svg path {
+                fill: $black;
+            }
+            &:hover {
+                svg path {
+                    fill: $white;
+                }
+            }
+        }
+        &.--gray {
+            svg path {
+                fill: $gray3;
+            }
+            &:hover {
+                svg path {
+                    fill: $white;
+                }
+            }
+        }
+        &.--white {
+            svg path {
+                fill: $white;
+            }
+            &:hover {
+                svg path {
+                    fill: $gray2;
+                }
+            }
+        }
+        &.--disabled {
+            svg path {
+                fill: $gray3;
+            }
+        }
+    }
+}
