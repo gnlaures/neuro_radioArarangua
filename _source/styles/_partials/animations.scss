@@ -1,5 +1,4 @@
-// Exemple:
-// use mixin
+// loader
 @include keyframes(loader) {
 	from {@include transforms(rotate(0deg), center)}
 	to {@include transforms(rotate(360deg), center)}
@@ -12,5 +11,45 @@
 	animation-timing-function: ease;
 	animation-play-state: running;
 	//animation-fill-mode: forwards;
+	//animation-delay: 2s;
+}
+
+// search
+@include keyframes(toggleSearch) {
+	from {
+		top: -100px;
+	}
+	to {
+		top: 0;
+	}
+}
+@mixin animation__toggleSearch() {
+	animation-name: toggleSearch;
+	animation-duration: 350ms;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: ease-in-out;
+	// animation-play-state: paused;
+	animation-fill-mode: forwards;
+	//animation-delay: 2s;
+}
+
+// radio online
+@include keyframes(radioOnline) {
+	from {
+		background: $radioOn;
+	}
+	to {
+		background: $radioOn_secondary;
+	}
+}
+@mixin animation__radioOnline() {
+	animation-name: radioOnline;
+	animation-duration: 800ms;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-timing-function: ease;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
 	//animation-delay: 2s;
 }

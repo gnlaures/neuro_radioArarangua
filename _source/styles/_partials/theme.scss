@@ -19,6 +19,18 @@ $secondaryDark: var(--secondaryDark);
 
 $wppPrimary: var(--wppPrimary);
 $wppSecondary: var(--wppSecondary);
+$twitterPrimary: var(--twitterPrimary);
+$twitterSecondary: var(--twitterSecondary);
+$facebookPrimary: var(--facebookPrimary);
+$facebookSecondary: var(--facebookSecondary);
+$instagramPrimary: var(--instagramPrimary);
+$instagramSecondary: var(--instagramSecondary);
+$linkedinPrimary: var(--linkedinPrimary);
+$linkedinSecondary: var(--linkedinSecondary);
+$spotifyPrimary: var(--spotifyPrimary);
+$spotifySecondary: var(--spotifySecondary);
+$youtubePrimary: var(--youtubePrimary);
+$youtubeSecondary: var(--youtubeSecondary);
 
 $feedbackSuccess: var(--feedbackSuccess);
 $feedbackLoad: var(--feedbackLoad);
@@ -27,6 +39,10 @@ $feedbackError: var(--feedbackError);
 $text: var(--text);
 $textLight: var(--textLight);
 $placeholderText: var(--placeholderText);
+
+$radioOff: var(--radioOff);
+$radioOn: var(--radioOn);
+$radioOn_secondary: var(--radioOn_secondary);
 
 // Sizes
 $containerPadding: var(--containerPadding);
@@ -42,10 +58,11 @@ $media_content: "../media/img/content/";
 
 // fonts
 $fontFamily__default: var(--fontFamily__default);
+$fontFamily__secondary: var(--fontFamily__secondary);
 
 // font weight
-//$fwThin: 100;
-//$fwExtraLight: 200;
+$fwThin: 100;
+$fwLight: 200;
 $fwLight: 300;
 $fwRegular: 400;
 $fwMedium: 500;

@@ -1,9 +1,12 @@
 {
     if ($('.l-nav').length) {
-        var navElement = $('.l-nav');
-        var navMobile = $('.l-navMobile');
-        var navHamburguer = $('.l-nav .c-hamburguer');
+        // elements
+        let navElement = $('.l-nav');
+        let navMobile = $('.l-navMobile');
+        let navHamburguer = $('.l-nav .c-hamburguer');
+        let navToggleSearch = $('.js-l-nav__toggleSearch');
 
+        // functions
         const closeAllNavElements = () => {
             $('.c-subMenu').removeClass('is-active');
             navHamburguer.removeClass('is-active');
@@ -15,7 +18,7 @@
             $('body').removeClass('u-overflowBlocked');
         }
 
-        // - open / close mobile menu
+        // open / close mobile menu
         $('.js-openNavMobile').on('click', function () {
             navMobile.addClass('is-active');
             $('.js-closeNavMobile.c-hamburguer').addClass('is-active');
@@ -29,7 +32,7 @@
 
         // scroll changes
         $(window).on('load', function (event) {
-            var scrollBody = $(this).scrollTop();
+            let scrollBody = $(this).scrollTop();
             if (scrollBody > 99) {
                 navElement.addClass('is-scrolled');
             } else {
@@ -37,7 +40,7 @@
             }
         });
         $(window).on('scroll', function () {
-            var scrollBody = $(this).scrollTop();
+            let scrollBody = $(this).scrollTop();
             // scroll up to 99
             if (scrollBody > 99) {
                 navElement.addClass('is-scrolled');
@@ -68,5 +71,12 @@
             // reference var
             navElement.scrollInit = scrollBody;
         });
+
+        // search
+        navToggleSearch.on('click', function() {
+            navToggleSearch.toggleClass('is-active');
+            $('.l-nav__search').toggleClass('is-active');
+        })
+
     }
 }

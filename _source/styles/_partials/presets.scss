@@ -59,7 +59,7 @@
     }
 }
 
-@mixin titles($arrow: false, $fs: 30px, $tc: $text, $fw: $fwExtraLight) {
+@mixin titles($arrow: false, $fs: 30px, $tc: $text, $fw: $fwLight) {
     display: block;
     font-weight: $fw;
     letter-spacing: 4px;
@@ -72,7 +72,7 @@
         &:before {
             content: '>';
             display: block;
-            font-weight: $fwExtraLight;
+            font-weight: $fwLight;
             font-size: 30px;
             color: $text;
             position: absolute;
@@ -82,7 +82,7 @@
     }
 }
 @mixin titlesSerif($fs: 55px, $tc: $white) {
-    font-family: $fontFamily__serif;
+    font-family: $fontFamily__default;
     font-size: $fs;
     color: $tc;
     font-weight: $fwBold;
@@ -91,7 +91,7 @@
     span {
         display: block;
         font-size: $fs + 15;
-        font-family: $fontFamily__serif;
+        font-family: $fontFamily__default;
         font-weight: $fwBold;
     }
     &:before {

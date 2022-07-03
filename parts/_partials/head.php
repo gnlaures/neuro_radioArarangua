@@ -6,11 +6,16 @@
 
     <!-- Metatags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=320, initial-scale=1, minimum-scale=1.0, maximum-scale=1.3, user-scalable=yes">
+    <meta name="viewport" content="width=400, initial-scale=1, minimum-scale=1.0, maximum-scale=1.3, user-scalable=yes">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <meta name="keywords" content="#"/>
-    <meta name="description" content="#"/>
+    <meta name="resource-type" content="document" />
+    <meta name="description" content="Rádio Araranguá! A informação em 1º lugar" />
+    <meta name="keywords" content="Informação, cultura, esporte, lazer, radio, ararangua, santa catarina, região sul" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="doc-class" content="Completed" />
+    <meta name="doc-rights" content="Public" />
 
     <meta name="author" content="#"/>
     <meta name="name" content="#">
@@ -48,7 +53,7 @@
     <!-- css files -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="theme_vars_config.css" type="text/css" rel="stylesheet" />
     <link href="dist/libraries-min.css" type="text/css" rel="stylesheet" />
     <link href="dist/styles-min.css" type="text/css" rel="stylesheet" />

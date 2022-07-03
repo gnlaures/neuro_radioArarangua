@@ -1,0 +1,18 @@
+.c-btnRadioOnOff {
+	.c-btn__icon span {
+		@include roundedAll(50%);
+		display: block;
+		width: 100%;
+		padding-top: 100%;
+	}
+	&.--on {
+		.c-btn__icon span {
+			@include animation__radioOnline;
+		}
+	}
+	&.--off {
+		.c-btn__icon span {
+			background: $radioOff;
+		}
+	}
+}

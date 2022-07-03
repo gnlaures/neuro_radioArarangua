@@ -18,14 +18,13 @@ $c_smartMenu_defaultPaddingLeft: 15px;
             position: relative;
             margin-right: 30px;
             > a {
-                letter-spacing: 2px;
                 display: block;
-                height: 28px;
-                line-height: 28px;
+                height: 30px;
+                line-height: 30px;
                 white-space: nowrap;
                 text-transform: uppercase;
-                font-size: 17px;
-                font-weight: $fwRegular;
+                font-size: 18px;
+                font-weight: $fwBold;
                 position: relative;
                 &:after {
                     @include transition();
@@ -38,17 +37,12 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                     bottom: -12px;
                     background: transparent;
                 }
-                &:hover {
-                    &:after {
-                        background: #000;
-                    }
-                }
             }
             > a.js-smartMenu__toggle {
                 padding-right: 18px;
                 &:before {
-                    @include transition();
                     content: '';
+                    @include transition();
                     display: block;
                     width: 12px;
                     height: 12px;
@@ -123,10 +117,10 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                 @include roundedAll();
                 //display: block;
                 overflow-y: auto;
-                max-height: 80vh;
-                width: 180px;
+                max-height: 60vh;
+                width: 220px;
                 position: absolute;
-                right: 0;
+                left: -50%;
                 top: 100%;
                 padding-top: 5px;
                 padding-bottom: 5px;
@@ -163,7 +157,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                     color: $white;
                     &.js-smartMenu__toggle {
                         &:before {
-                            background: url(#{$media_assets}caret_white_down.svg);
+                            background: url(#{$media_icons}icon_caret_down_white.svg);
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: contain;
@@ -188,7 +182,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                         color: $text;
                         &.js-smartMenu__toggle {
                             &:before {
-                                background: url(#{$media_assets}caret_black_down.svg);
+                                background: url(#{$media_icons}icon_caret_down.svg);
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 background-size: contain;
@@ -243,15 +237,21 @@ $c_smartMenu_defaultPaddingLeft: 15px;
             }
         }
     }
-    &.--black {
+    &.--secondary {
         // main itens
         > ul {
             > li {
                 > a {
-                    color: $black;
+                    color: $secondary;
+                    &:hover {
+                        &:after {
+                            background: $secondary;
+                        }
+                    }
                     &.js-smartMenu__toggle {
+                        position: relative;
                         &:before {
-                            background: url(#{$media_assets}caret_black_down.svg);
+                            background: url(#{$media_icons}icon_caret_down.svg);
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: contain;
@@ -260,71 +260,134 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                 }
             }
         }
-        // first sub menu
-        > ul {
-            > li {
-                > ul {
-                    background: $black;
-                }
-            }
-        }
-        // all sub itens
+        // sub itens
         > ul {
             > li {
                 ul {
+                    background: $secondary;
                     a {
                         color: $white;
+                        font-weight: $fwBold;
                         &.js-smartMenu__toggle {
                             &:before {
-                                background: url(#{$media_assets}caret_white_down.svg);
+                                background: url(#{$media_icons}icon_caret_down_white.svg);
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 background-size: contain;
                             }
                         }
                         &:hover {
-                            background: $black3;
+                            background: $secondaryDark;
+                            color: $primary;
+                        }
+                    }
+                    > li {
+                        > ul {
+                            background: $secondaryLight;
                         }
                     }
                 }
             }
         }
-        // bg colors
+    }
+    &.--primary {
+        // main itens
         > ul {
             > li {
-                > ul {
+                > a {
+                    color: $primary;
+                    &:hover {
+                        &:after {
+                            background: $primary;
+                        }
+                    }
+                    &.js-smartMenu__toggle {
+                        position: relative;
+                        &:before {
+                            background: url(#{$media_icons}icon_caret_down.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+        // sub itens
+        > ul {
+            > li {
+                ul {
+                    background: $primary;
+                    a {
+                        color: $secondaryDark;
+                        font-weight: $fwBold;
+                        &.js-smartMenu__toggle {
+                            &:before {
+                                background: url(#{$media_icons}icon_caret_down.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                        &:hover {
+                            background: $primaryDark;
+                        }
+                    }
                     > li {
                         > ul {
-                            background: $black2;
-                            > li {
-                                > a {
-                                    padding-left: $c_smartMenu_defaultPaddingLeft + 10px;
-                                }
-                                > ul {
-                                    background: $black3;
-                                    > li {
-                                        > a {
-                                            padding-left: $c_smartMenu_defaultPaddingLeft + 15px;
-                                        }
-                                        > ul {
-                                            background: $black2;
-                                            > li {
-                                                > a {
-                                                    padding-left: $c_smartMenu_defaultPaddingLeft + 20px;
-                                                }
-                                                > ul {
-                                                    background: $black3;
-                                                    > li {
-                                                        > a {
-                                                            padding-left: $c_smartMenu_defaultPaddingLeft + 25px;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
+                            background: $primaryLight;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.--gray {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $text;
+                    &:hover {
+                        &:after {
+                            background: $primary;
+                        }
+                    }
+                    &.js-smartMenu__toggle {
+                        position: relative;
+                        &:before {
+                            background: url(#{$media_icons}icon_caret_down.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+        // sub itens
+        > ul {
+            > li {
+                ul {
+                    background: $white2;
+                    a {
+                        color: $text;
+                        font-weight: $fwBold;
+                        &.js-smartMenu__toggle {
+                            &:before {
+                                background: url(#{$media_icons}icon_caret_down.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
                             }
+                        }
+                        &:hover {
+                            background: $gray;
+                        }
+                    }
+                    > li {
+                        > ul {
+                            background: $white3;
                         }
                     }
                 }
@@ -340,7 +403,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                 > a {
                     &.js-smartMenu__toggle {
                         &:before {
-                            background: url(#{$media_assets}caret_white_down.svg) !important;
+                            background: url(#{$media_icons}icon_caret_down_white.svg) !important;
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: contain;
@@ -357,7 +420,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                 > a {
                     &.js-smartMenu__toggle {
                         &:before {
-                            background: url(#{$media_assets}caret_black_down.svg) !important;
+                            background: url(#{$media_icons}icon_caret_down.svg) !important;
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: contain;
@@ -376,7 +439,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                     a {
                         &.js-smartMenu__toggle {
                             &:before {
-                                background: url(#{$media_assets}caret_white_down.svg) !important;
+                                background: url(#{$media_icons}icon_caret_down_white.svg) !important;
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 background-size: contain;
@@ -396,7 +459,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                     a {
                         &.js-smartMenu__toggle {
                             &:before {
-                                background: url(#{$media_assets}caret_black_down.svg) !important;
+                                background: url(#{$media_icons}icon_caret_down.svg) !important;
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 background-size: contain;

@@ -2,88 +2,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
     li {
-        padding: 2px;
-    }
-    a {
-        display: block;
-    }
-    svg {
-        display: block;
-        width: 16px;
-        height: 16px;
-        path, circle {
-            @include transition();
-        }
-    }
-    &.--rounded {
-        a {
-            @include transition();
-            @include roundedAll(50%);
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-        }
-        &.--black {
-            a {
-                background: $black;
-                svg path, svg circle {
-                    fill: $white !important;
-                }
-                &:hover {
-                    background: $black2;
-                }
-            }
-        }
-        &.--white {
-            a {
-                background: $white;
-                svg path, svg circle {
-                    fill: $gray2 !important;
-                }
-                &:hover {
-                    background: $white3;
-                }
-            }
-        }
-    }
-    &.--default {
-        a {
-            @include transition();
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 26px;
-            height: 26px;
-        }
-        &.--black {
-            a {
-                svg path, svg circle {
-                    fill: $black !important;
-                }
-                &:hover {
-                    svg path, svg circle {
-                        fill: $black2 !important;
-                    }
-                }
-            }
-        }
-        &.--white {
-            a {
-                svg path, svg circle {
-                    fill: $white !important;
-                }
-                &:hover {
-                    svg path, svg circle {
-                        fill: $white3 !important;
-                    }
-                }
-            }
-        }
+        padding: 0 4px;
     }
 }

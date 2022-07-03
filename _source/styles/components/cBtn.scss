@@ -1,206 +1,235 @@
-// c-btn
-$btn_maxWidth: 220px;
-$btn_height: 40px;
-$btn_heightSmall: 30px;
-$btn_padding: 0 15px;
-$btn_paddingSmall: 0 10px;
-$btn_paddingBig: 0 20px;
-$btn_radius: 0;
-$btn_iconSize: 16px;
-$btn_text_fontSize: 14px;
-$btn_text_fontWeight: $fwLight;
+@mixin cBtn--l() {
+    .c-btn__content {
+        height: 50px;
+    }
+    .c-btn__icon {
+        @include flexWidth(42px);
+        padding-right: 12px;
+        svg, img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .c-btn__caption {
+        font-size: 20px;
+    }
+}
+@mixin cBtn--m() {
+    .c-btn__content {
+        height: 42px;
+    }
+    .c-btn__icon {
+        @include flexWidth(34px);
+        padding-right: 10px;
+        svg, img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .c-btn__caption {
+        font-size: 18px;
+    }
+}
+@mixin cBtn--s() {
+    .c-btn__content {
+        height: 34px;
+        padding: 0 15px;
+    }
+    .c-btn__icon {
+        @include flexWidth(28px);
+        padding-right: 8px;
+        svg, img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .c-btn__caption {
+        font-size: 15px;
+    }
+}
 
 .c-btn {
+    @include transforms(skewX(-10deg), center);
     @include transition();
-    @include roundedAll($btn_radius);
-    display: block;
-    width: 100%;
-    max-width: $btn_maxWidth;
-    height: $btn_height;
-    padding: $btn_padding;
-    line-height: 1.1;
-    font-size: $btn_text_fontSize;
-    font-weight: $btn_text_fontWeight;
-    text-align: center;
-    cursor: pointer;
-    letter-spacing: 2px;
-
-    // colors modifiers
-    &.--black {
-        background: $black;
+    @include roundedAll();
+    display: inline-block;
+    max-width: 250px;
+    &__content {
+        @include transforms(skewX(10deg), center);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding: 0 20px;
+        position: relative;
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        object-fit: contain;
+    }
+    &__caption {
+        flex: 0 1 auto;
+        display: block;
         color: $white;
+        font-weight: $fwBold;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    // themes
+    &.--primary {
+        background: $primary;
         &:hover {
-            background: $black3;
+            background: $primaryDark;
+        }
+    }
+    &.--secondary {
+        background: $secondary;
+        &:hover {
+            background: $secondaryDark;
+        }
+    }
+    &.--wpp {
+        background: $wppPrimary;
+        &:hover {
+            background: $wppSecondary;
         }
     }
     &.--white {
         background: $white;
-        color: $text;
+        .c-btn__icon {
+            svg path {
+                fill: $text;
+            }
+        }
+        .c-btn__caption {
+            color: $text;
+        }
         &:hover {
-            background: $white2;
-            color: $black2;
+            background: $gray;
         }
     }
     &.--gray {
-        background: $gray;
-        color: $black;
+        background: $gray2;
+        .c-btn__icon {
+            svg path {
+                fill: $gray4;
+            }
+        }
+        .c-btn__caption {
+            color: $gray4;
+        }
         &:hover {
-            background: $gray2;
+            background: $gray3;
+            .c-btn__icon {
+                svg path {
+                    fill: $black3;
+                }
+            }
+            .c-btn__caption {
+                color: $black3;
+            }
         }
     }
-    &.--disabled {
-        pointer-events: none;
-        background: $gray3;
-        color: $gray2;
-    }
 
-    // size modifiers
-    &.--small {
-        padding: $btn_paddingSmall;
-        height: $btn_heightSmall;
-        line-height: $btn_heightSmall;
+    // sizes
+    &.--l {
+        @include cBtn--l();
     }
-    &.--big {
-        height: $btn_height + 20px;
-        line-height: $btn_height + 20px;
-        padding: $btn_paddingBig;
-        text-transform: uppercase;
-        font-weight: $fwBold;
-        font-size: 18px;
+    &.--m {
+        @include cBtn--m();
+    }
+    &.--s {
+        @include cBtn--s();
     }
 
     // stroke
     &.--stroke {
         background: transparent;
-        border: 1px solid;
-        line-height: $btn_height - 2px;
-        &.--black {
-            border-color: $black;
-            color: $black;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 3px;
+
+        // fix align
+        &.--s,
+        &.--m {
+            .c-btn__content {
+                top: 1px;
+            }
+        }
+
+        // themes
+        &.--primary {
+            border-color: $primary;
             &:hover {
-                border-color: $black2;
-                color: $white;
+                border-color: $primaryDark;
+            }
+        }
+        &.--secondary {
+            border-color: $secondary;
+            &:hover {
+                border-color: $secondaryDark;
+            }
+        }
+        &.--wpp {
+            border-color: $wppPrimary;
+            &:hover {
+                border-color: $wppSecondary;
             }
         }
         &.--white {
             border-color: $white;
-            color: $white;
-            &:hover {
-                border-color: $white2;
-                color: $black2;
+            .c-btn__icon {
+                svg path {
+                    fill: $white;
+                }
             }
-        }
-        &.--gray {
-            border-color: $gray;
-            color: $text;
-            &:hover {
-                border-color: $black;
-                background: $black;
+            .c-btn__caption {
                 color: $white;
             }
+            &:hover {
+                border-color: $gray;
+                .c-btn__icon {
+                    svg path {
+                        fill: $text;
+                    }
+                }
+                .c-btn__caption {
+                    color: $text;
+                }
+            }
         }
-        &.--disabled {
+        &.--gray {
             border-color: $gray3;
-            color: $gray2;
-        }
-    }
-
-    // with icon
-    &.--icon {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
-        i {
-            display: block;
-            width: $btn_iconSize;
-            height: $btn_iconSize;
-            svg, img {
-                display: block;
-                width: $btn_iconSize;
-                height: $btn_iconSize;
-                object-fit: contain;
-                object-position: center;
-                path {
-                    @include transition();
-                }
-            }
-        }
-        span {
-            padding-left: 8px;
-            font-size: $btn_text_fontSize;
-            font-weight: $btn_text_fontWeight;
-        }
-        &.--black {
-            svg path {
-                fill: $white;
-            }
-        }
-        &.--gray {
-            svg path {
-                fill: $text;
-            }
-        }
-        &.--disabled {
-            svg path {
-                fill: $gray2;
-            }
-        }
-        &.--white {
-            svg path {
-                fill: $text;
-            }
-        }
-
-        &.--inverse {
-            i {
-                order: 2;
-            }
-            span {
-                padding-left: 0;
-                padding-right: 8px;
-                order: 1;
-            }
-        }
-    }
-
-    // stroke with icon
-    &.--icon.--stroke {
-        &.--black {
-            svg path {
-                fill: $black;
-            }
-            &:hover {
-                svg path {
-                    fill: $white;
-                }
-            }
-        }
-        &.--gray {
-            svg path {
-                fill: $gray3;
-            }
-            &:hover {
-                svg path {
-                    fill: $white;
-                }
-            }
-        }
-        &.--white {
-            svg path {
-                fill: $white;
-            }
-            &:hover {
+            .c-btn__icon {
                 svg path {
                     fill: $gray2;
                 }
             }
-        }
-        &.--disabled {
-            svg path {
-                fill: $gray3;
+            .c-btn__caption {
+                color: $gray2;
+            }
+            &:hover {
+                background: $gray3;
+                .c-btn__icon {
+                    svg path {
+                        fill: $black3;
+                    }
+                }
+                .c-btn__caption {
+                    color: $black3;
+                }
             }
         }
+    }
+
+    // extra
+    &.--disabled {
+        cursor: not-allowed;
+    }
+    &.--noEvents {
+        pointer-events: none;
     }
 }

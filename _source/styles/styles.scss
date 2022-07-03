@@ -1,5 +1,4 @@
 // theme
-@import "_partials/type.scss";
 @import "_partials/theme.scss";
 
 // utilities
@@ -13,52 +12,29 @@
 
 // components
 @import "components/cBtn.scss";
+@import "components/cBtnIcon.scss";
+@import "components/cBtnRadioOnOff.scss";
+@import "components/cSocialList";
+@import "components/cSocialUser";
+@import "components/cCardSweather.scss";
+
 @import "components/cForm.scss";
 @import "components/cSmartMenu.scss";
 @import "components/cResponsiveGrid.scss";
 @import "components/cBrand.scss";
-@import "components/cSearch.scss";
-@import "components/cLanguages.scss";
 @import "components/cHamburguer.scss";
-@import "components/cSearchProduct.scss";
-@import "components/cCardGalleryProduct.scss";
-@import "components/cCardBlogPost.scss";
-@import "components/cNewsletter.scss";
-@import "components/cSocialList.scss";
 @import "components/cToggleList.scss";
 @import "components/cContactList.scss";
 @import "components/cContactForm.scss";
 @import "components/cFeedbackForm.scss";
 @import "components/cVideo.scss";
 @import "components/cPlainText.scss";
-@import "components/cBlogArticle.scss";
-@import "components/cCardGrout.scss";
-@import "components/cDefaultSlider.scss";
-@import "components/cAddressList.scss";
-@import "components/cCardFindUs.scss";
-@import "components/cComments.scss";
+@import "components/cSearch.scss";
 
 // sections
-@import "sections/sGalleryProduct.scss";
-@import "sections/sBlog.scss";
-@import "sections/sBanner.scss";
-@import "sections/sContact.scss";
 @import "sections/s404.scss";
-@import "sections/sAboutBlock";
-@import "sections/sBlogPosts.scss";
-@import "sections/sOnlyText.scss";
-@import "sections/sCatalog.scss";
-@import "sections/sProduct.scss";
-@import "sections/sFindUs.scss";
-
-// modal
-@import "modal/m-modal.scss";
-@import "modal/m-webApp.scss";
-@import "modal/m-youtubeVideo";
-@import "modal/m-simple";
 
 // layouts
 @import "layout/lPage";
 @import "layout/lNav";
-@import "layout/lFullBanner";
 @import "layout/lFooter";

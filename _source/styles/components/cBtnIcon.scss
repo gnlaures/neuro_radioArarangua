@@ -1,0 +1,229 @@
+.c-btnIcon {
+	@include transition();
+	@include roundedAll();
+	@include transforms(skewX(-10deg), center);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	> * {
+		@include transforms(skewX(10deg), center);
+		display: block;
+		object-fit: contain;
+	}
+
+	// sizes
+	&.--l {
+		padding: 6px;
+		> * {
+			width: 32px;
+			height: 30px;
+		}
+	}
+	&.--m {
+		padding: 4px;
+		> * {
+			width: 26px;
+			height: 24px;
+		}
+	}
+	&.--s {
+		padding: 3px;
+		> * {
+			width: 24px;
+			height: 22px;
+		}
+	}
+
+	// themes
+	&.--bg {
+		&.--primary {
+			background: $primary;
+			&:hover {
+				background: $primaryDark;
+			}
+		}
+		&.--secondary {
+			background: $secondary;
+			&:hover {
+				background: $secondaryDark;
+			}
+		}
+		&.--white {
+			background: $white;
+			&:hover {
+				background: $gray;
+			}
+		}
+		&.--wpp {
+			background: $wppPrimary;
+			&:hover {
+				background: $wppSecondary;
+			}
+		}
+		&.--facebook {
+			background: $facebookPrimary;
+			&:hover {
+				background: $facebookSecondary;
+			}
+		}
+		&.--twitter {
+			background: $twitterPrimary;
+			&:hover {
+				background: $twitterSecondary;
+			}
+		}
+		&.--instagram {
+			background: $instagramPrimary;
+			&:hover {
+				background: $instagramSecondary;
+			}
+		}
+		&.--linkedin {
+			background: $linkedinPrimary;
+			&:hover {
+				background: $linkedinSecondary;
+			}
+		}
+		&.--youtube {
+			background: $youtubePrimary;
+			&:hover {
+				background: $youtubeSecondary;
+			}
+		}
+		&.--spotify {
+			background: $spotifyPrimary;
+			&:hover {
+				background: $spotifySecondary;
+			}
+		}
+	}
+	&.--stroke {
+		border-color: transparent;
+		border-style: solid;
+		border-width: 3px;
+		&.--primary {
+			border-color: $primary;
+			&:hover {
+				border-color: $primaryDark;
+				background: $primaryDark;
+			}
+		}
+		&.--secondary {
+			border-color: $secondary;
+			&:hover {
+				border-color: $secondaryDark;
+				background: $secondaryDark;
+			}
+		}
+		&.--white {
+			border-color: $white;
+			&:hover {
+				border-color: $gray;
+				background: $gray;
+			}
+		}
+		&.--wpp {
+			border-color: $wppPrimary;
+			&:hover {
+				border-color: $wppSecondary;
+				background: $wppSecondary;
+			}
+		}
+		&.--facebook {
+			border-color: $facebookPrimary;
+			&:hover {
+				border-color: $facebookSecondary;
+				background: $facebookSecondary;
+			}
+		}
+		&.--twitter {
+			border-color: $twitterPrimary;
+			&:hover {
+				border-color: $twitterSecondary;
+				background: $twitterSecondary;
+			}
+		}
+		&.--instagram {
+			border-color: $instagramPrimary;
+			&:hover {
+				border-color: $instagramSecondary;
+				background: $instagramSecondary;
+			}
+		}
+		&.--linkedin {
+			border-color: $linkedinPrimary;
+			&:hover {
+				border-color: $linkedinSecondary;
+				background: $linkedinSecondary;
+			}
+		}
+		&.--youtube {
+			border-color: $youtubePrimary;
+			&:hover {
+				border-color: $youtubeSecondary;
+				background: $youtubeSecondary;
+			}
+		}
+		&.--spotify {
+			border-color: $spotifyPrimary;
+			&:hover {
+				border-color: $spotifySecondary;
+				background: $spotifySecondary;
+			}
+		}
+	}
+	&.--isolated {
+		&.--primary {
+			&:hover {
+				background: $primaryDark;
+			}
+		}
+		&.--secondary {
+			&:hover {
+				background: $secondaryDark;
+			}
+		}
+		&.--white {
+			&:hover {
+				background: $gray;
+			}
+		}
+		&.--wpp {
+			&:hover {
+				background: $wppPrimary;
+			}
+		}
+		&.--facebook {
+			&:hover {
+				background: $facebookPrimary;
+			}
+		}
+		&.--twitter {
+			&:hover {
+				background: $twitterPrimary;
+			}
+		}
+		&.--instagram {
+			&:hover {
+				background: $instagramPrimary;
+			}
+		}
+		&.--linkedin {
+			&:hover {
+				background: $linkedinPrimary;
+			}
+		}
+		&.--youtube {
+			&:hover {
+				background: $youtubePrimary;
+			}
+		}
+		&.--spotify {
+			&:hover {
+				background: $spotifyPrimary;
+			}
+		}
+	}
+}

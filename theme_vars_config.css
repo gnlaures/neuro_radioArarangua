@@ -1,11 +1,13 @@
 :root {
-    /* colors */
+    /* project colors */
     --primaryLight: #ff5e1b;
     --primary: #FF4A00;
-    --primaryDark: #e83400;
+    --primaryDark: #D57C1C;
     --secondaryLight: #1b3c87;
     --secondary: #112C69;
     --secondaryDark: #071942;
+
+    /* more colors */
     --white: #fff;
     --white2: #F5F7FA;
     --white3: #f2f2f2;
@@ -16,14 +18,37 @@
     --black: #000000;
     --black2: #191919;
     --black3: #2d2d2d;
-    --wppPrimary: #03BF56;
-    --wppSecondary: #02AB4D;
-    --feedbackSuccess: #000;
-    --feedbackLoad: #5f5f5f;
-    --feedbackError: #f05555;
+
+    /* text colors */
     --text: #323F4B;
     --textLight: #6F6F6E;
     --placeholderText: rgba(78, 78, 78, 0.75);
+
+    /* form colors */
+    --feedbackSuccess: #000;
+    --feedbackLoad: #5f5f5f;
+    --feedbackError: #f05555;
+
+    /* radio status colors */
+    --radioOff: #B81800;
+    --radioOn: #12db6b;
+    --radioOn_secondary: var(--primaryLight);
+
+    /* social colors */
+    --wppPrimary: #03BF56;
+    --wppSecondary: #02AB4D;
+    --twitterPrimary: #0F9DFF;
+    --twitterSecondary: #047fd4;
+    --facebookPrimary: #3764B9;
+    --facebookSecondary: #28519e;
+    --instagramPrimary: #FF3A55;
+    --instagramSecondary: #d11f38;
+    --linkedinPrimary: #2864B4;
+    --linkedinSecondary: #194c91;
+    --spotifyPrimary: #1ED764;
+    --spotifySecondary: #11ad4c;
+    --youtubePrimary: #C4302B;
+    --youtubeSecondary: #9c1d19;
 
     /* sizes */
     --containerPadding: 20px;
@@ -34,4 +59,5 @@
 
     /* fonts */
     --fontFamily__default: 'Open Sans', sans-serif;
+    --fontFamily__secondary: 'Exo', sans-serif;
 }

@@ -5,19 +5,51 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     cursor: pointer;
     &__bar {
+        @include roundedAll(2px);
+        @include transforms(skewX(-20deg), center);
         @include transition();
         display: block;
-        width: 100%;
         position: relative;
-    }
-
-    &.--gray {
-        .c-hamburguer__bar {
-            background: $gray2;
+        &.--bar1 {
+            width: 100%;
+        }
+        &.--bar2 {
+            width: 100%;
+            right: 3px;
+        }
+        &.--bar3 {
+            width: 50%;
+            right: 7px;
         }
     }
+
+    // sizes
+    &.--l {
+        @include flexWidth(65px);
+        height: 30px;
+        .c-hamburguer__bar {
+            height: 6px;
+        }
+    }
+    &.--m {
+        @include flexWidth(50px);
+        height: 25px;
+        .c-hamburguer__bar {
+            height: 5px;
+        }
+    }
+    &.--s {
+        @include flexWidth(35px);
+        height: 20px;
+        .c-hamburguer__bar {
+            height: 4px;
+        }
+    }
+
+    // themes
     &.--white {
         .c-hamburguer__bar {
             background: $white;
@@ -34,36 +66,8 @@
         }
     }
 
-    &.--light {
-        .c-hamburguer__bar {
-            height: 1px;
-        }
-    }
-    &.--regular {
-        .c-hamburguer__bar {
-            height: 2px;
-        }
-    }
-    &.--bold {
-        height: 17px;
-        .c-hamburguer__bar {
-            height: 3px;
-        }
-    }
-    &.--black {
-        .c-hamburguer__bar {
-            height: 4px;
-        }
-    }
-
-    &.--rounded {
-        .c-hamburguer__bar {
-            @include roundedAll();
-        }
-    }
-
     &.is-active {
-        @include transforms(rotate(180deg), center);
+        @include transforms(rotate(-180deg), center);
         .c-hamburguer__bar {
             &:nth-child(1) {
                 @include transforms(rotate(45deg), center);
@@ -75,43 +79,39 @@
                 @include transforms(rotate(-45deg), center);
             }
         }
-        &.--light {
+        &.--l {
             .c-hamburguer__bar {
+                right: 20px;
+                width: 30px;
                 &:nth-child(1) {
-                    top: 7px;
+                    top: 12px;
                 }
                 &:nth-child(3) {
-                    top: -8px;
+                    top: -12px;
                 }
             }
         }
-        &.--regular {
+        &.--m {
             .c-hamburguer__bar {
+                width: 25px;
+                right: 16px;
                 &:nth-child(1) {
-                    top: 6px;
+                    top: 10px;
                 }
                 &:nth-child(3) {
-                    top: -8px;
+                    top: -10px;
                 }
             }
         }
-        &.--bold {
+        &.--s {
             .c-hamburguer__bar {
+                width: 20px;
+                right: 10px;
                 &:nth-child(1) {
-                    top: 6px;
+                    top: 8px;
                 }
                 &:nth-child(3) {
                     top: -8px;
-                }
-            }
-        }
-        &.--black {
-            .c-hamburguer__bar {
-                &:nth-child(1) {
-                    top: 6px;
-                }
-                &:nth-child(3) {
-                    top: -6px;
                 }
             }
         }

@@ -85,15 +85,10 @@ include("parts/_partials/head.php");
 include("parts/layout/l-nav.php");
 
 // render page content
-include($file);
+// include($file);
 
 // footer
-include("parts/layout/l-footer.php");
-
-// modal's
-include("parts/modal/m-webApp.php");
-$mVideo = array('modal-id' => 'video-explore', 'video-id' => 'B1noJ-lAVvs');
-include('parts/modal/m-youtubeVideo.php');
+// include("parts/layout/l-footer.php");
 
 // end
 include("parts/_partials/end.php");

@@ -1,80 +1,288 @@
 .l-nav {
-    @include transition();
-    display: block;
-    width: 100%;
-    max-width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    &__main {
-        @include transition();
+	@include transition();
+	display: block;
+	width: 100%;
+	max-width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	&__global {
         display: block;
+        position: relative;
+		z-index: 3;
+		min-height: 128px;
+        .u-container {
+            padding-left: 315px;
+        }
+        &__primary {
+            background: $primaryDark;
+            position: relative;
+            z-index: 3;
+            &__brand {
+	            @include transition();
+                @include transforms(skewX(-10deg), center);
+                @include flexWidth(300px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding-left: 15px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                background: $secondary;
+                min-height: 134px;
+                border-bottom-right-radius: 15px;
+                &:before,
+                &:after {
+                    @include transforms(skewX(10deg), center);
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    background: $secondary;
+                    position: absolute;
+                    top: 0;
+                    z-index: 1;
+                }
+                &:before {
+                    width: calc((100vw - var(--containerWidth)) / 2);
+                    right: 300px;
+                }
+                &:after {
+                    width: 50px;
+                    left: -10px;
+                }
+                .c-brand {
+                    @include transforms(skewX(10deg), center);
+                    @include flexWidth(222px);
+                    position: relative;
+                    z-index: 2;
+                }
+
+            }
+            &__content {
+	            @include transition();
+                padding: 10px 0;
+	            display: flex;
+	            justify-content: flex-end;
+	            .c-socialList {
+		            margin-left: 20px;
+	            }
+            }
+        }
+        &__secondary {
+	        @include transition();
+            background: $primary;
+            position: relative;
+            z-index: 1;
+            padding: 13px 0;
+	        .c-hamburguer {
+		        display: none;
+		        margin-left: 30px;
+	        }
+	        ul {
+		        display: flex;
+		        flex-direction: row;
+		        align-items: center;
+		        justify-content: flex-end;
+		        width: 100%;
+		        li {
+			        margin-left: 15px;
+			        &:first-of-type {
+				        margin-left: 0;
+			        }
+		        }
+	        }
+	        p {
+		        max-width: 160px;
+		        color: $white;
+		        font-weight: $fwBold;
+		        font-size: 14px;
+		        text-transform: uppercase;
+	        }
+        }
+	}
+    &__main {
+	    @include transition();
         background: $white;
-        border-bottom: 1px solid $gray;
+        box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.2);
+        position: relative;
         padding: 12px 0;
+        z-index: 2;
         .u-container {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: nowrap;
         }
-    }
-
-    &__brand {
-        @include flexWidth(187px);
-        display: block;
-        a, img {
-            display: block;
-            width: 100%;
+        &__menu {
+            flex: 1 1 auto;
+            padding-right: 20px;
+	        .c-smartMenu {
+		        > ul {
+			        @include calcWidthForPositionNegative(-5px);
+			        flex-wrap: wrap;
+			        justify-content: space-between;
+			        > li {
+				        padding: 0 5px;
+				        margin-right: 0;
+			        }
+		        }
+	        }
         }
-    }
-
-    &__content {
-        flex: 1 1 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-left: 30px;
+        &__search {
+            span {
+	            @include transition();
+                @include flexWidth(40px);
+	            @include rotate(0deg, center);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+	            cursor: pointer;
+	            i, svg {
+		            display: block;
+		            width: 24px;
+		            height: 24px;
+		            path {
+			            stroke: $secondary;
+		            }
+	            }
+	            &.is-active {
+		            @include rotate(-45deg, center);
+		            svg path {
+			            stroke: $primary;
+		            }
+	            }
+            }
+        }
     }
     &__search {
-        @include flexWidth(145px);
-        padding-right: 15px;
-    }
-    &__lang {
-        @include flexWidth(18px);
-        position: relative;
-        z-index: 2;
-    }
-    &__menu {
-        @include flexWidth(100%);
-        display: block;
-        padding-top: 15px;
+	    @include transition();
+	    display: none;
         position: relative;
         z-index: 1;
-        .c-smartMenu {
-            display: flex;
-            justify-content: flex-end;
-        }
+	    top: -100px;
+	    &.is-active {
+		    @include animation__toggleSearch();
+		    display: block;
+	    }
+	    .c-search {
+		    @include roundedAll(0 0 $defaultRadius $defaultRadius);
+		    padding: 25px 20px 20px 20px;
+		    background: $secondary;
+		    max-width: 450px;
+	    }
     }
 
-    &__hamburguer {
-        display: none;
-    }
+	&.is-middle {
 
-    &.is-middle {}
-    &.is-scrolled {
-        .l-nav__main {
-            padding: 8px 0;
-        }
-    }
-    &.is-hidden {
-        // top: -180px;
-    }
+	}
+	&.is-hidden {
+		top: -128px;
+		.l-nav__global__primary__brand {
+			top: -15px;
+		}
+		&:hover {
+			top: 0;
+			.l-nav__global__primary__brand {
+				top: 0;
+			}
+		}
+	}
 }
+@media screen and (max-width: 1140px) {
+	.l-nav {
+		&__search,
+		&__main {
+			display: none;
+		}
+
+		&__global {
+			&__secondary {
+				.c-hamburguer {
+					display: flex;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1040px) {
+	.l-nav__global__secondary p {
+		display: none;
+	}
+}
+@media screen and (max-width: 860px) {
+	.l-nav {
+		&__global {
+			min-height: 100px;
+			.u-container {
+				padding-left: 200px;
+			}
+			&__primary {
+				&__brand {
+					@include flexWidth(180px);
+					min-height: 100px;
+					.c-brand {
+						@include flexWidth(144px)
+					}
+				}
+				&__content {
+					padding: 6px 0;
+					.c-cardSweather {
+						@include cCardSweather--s();
+					}
+					.c-socialList {
+						display: none;
+					}
+				}
+			}
+			&__secondary {
+				.c-btn {
+					@include cBtn--m();
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.l-nav__global__secondary ul li {
+		display: none;
+		&:last-of-type {
+			display: block;
+		}
+	}
+}
+@media screen and (max-width: 490px) {
+	.l-nav {
+		.c-btnRadioOnOff {
+			@include cBtn--s;
+		}
+		.c-hamburguer {
+			margin-left: 20px;
+		}
+	}
+}
+@media screen and (max-width: 450px) {
+	.l-nav__global {
+		min-height: 82px;
+		.u-container {
+			padding-left: 150px;
+		}
+	}
+	.l-nav__global__secondary {
+		padding: 8px 0;
+	}
+	.l-nav__global__primary__brand {
+		@include flexWidth(150px);
+		min-height: 82px;
+		.c-brand {
+			@include flexWidth(120px);
+		}
+	}
+}
+
 .l-navMobile {
     @include u-hideElement;
     @include transition();
@@ -85,6 +293,7 @@
     top: 0;
     left: 0;
     z-index: 101;
+
     &__mask {
         @include transition($duration: 150ms);
         display: block;
@@ -108,7 +317,9 @@
         top: 0;
         z-index: 2;
         overflow: auto;
-        padding: 30px 30px 90px 30px;
+	    &__hero {
+		    padding: 40px 20px;
+	    }
         &.--left {
             left: -500px;
         }
@@ -117,33 +328,62 @@
         }
     }
 
-    &__hero {
-        > div {
-            margin-bottom: 45px;
-        }
-    }
-    &__menu {
-        .c-smartMenu {
-            > ul > li {
-                margin-bottom: 10px;
-                > a {
-                    &:hover {
-                        &:after {
-                            background: transparent;
-                        }
-                    }
-                }
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
-    &__search,
-    &__lang {
-        display: none;
-        width: 100%;
-    }
+	&__widget {
+		display: block;
+		margin-bottom: 35px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		> h4 {
+			color: $primary;
+			font-weight: $fwBold;
+			text-transform: uppercase;
+			font-size: 20px;
+			max-width: 240px;
+			margin-bottom: 15px;
+		}
+		&.--social {
+			ul {
+				li {
+					margin-bottom: 20px;
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.c-smartMenu {
+		> ul {
+			> li {
+				border-bottom: 1px solid $gray;
+				padding-bottom: 5px;
+				margin-bottom: 8px;
+				&:last-of-type {
+					margin-bottom: 0;
+					padding-bottom: 0;
+					border-bottom: 0;
+				}
+				a {
+					font-weight: $fwSemiBold;
+					color: $text;
+					font-size: 14px;
+					&:after {
+						display: none;
+					}
+				}
+				ul {
+					@include roundedAll($defaultRadius);
+					overflow: hidden;
+					margin-top: 5px;
+					a {
+						font-weight: $fwMedium;
+					}
+				}
+			}
+		}
+	}
 
     &__close {
         display: flex;
@@ -165,56 +405,8 @@
         }
     }
 }
-
-// hide menu and show hamburuger
-@media screen and (max-width: 980px) {
-    .l-nav {
-        &__main {
-            padding: 20px 0;
-        }
-        &__menu {
-            display: none;
-        }
-        &__hamburguer {
-            display: block;
-            padding-left: 15px;
-            margin-left: 15px;
-            border-left: 1px solid $gray;
-        }
-    }
-}
-// hide search & languages
-@media screen and (max-width: 520px) {
-    .l-nav {
-        &__search {
-            display: none;
-        }
-        &__lang {
-            display: none;
-        }
-        &__hamburguer {
-            padding-left: 0;
-            margin-left: 0;
-            border-left: 0;
-        }
-    }
-    .l-navMobile {
-        &__search {
-            display: block;
-        }
-        &__lang {
-            display: block;
-        }
-    }
-}
-// resize brand
-@media screen and (max-width: 460px) {
-    .l-nav {
-        &__main {
-            padding: 20px 0;
-        }
-        &__brand {
-            @include flexWidth(150px);
-        }
-    }
+@media screen and (max-width: 400px) {
+	.l-navMobile__content {
+		max-width: 290px;
+	}
 }

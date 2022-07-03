@@ -1,0 +1,145 @@
+@mixin cCardSweather--s() {
+	.c-cardSweather__city {
+		font-size: 12px;
+	}
+	.c-cardSweather__icon {
+		@include flexWidth(20px);
+		svg, img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	.c-cardSweather__temp span.temp {
+		font-size: 14px;
+	}
+}
+
+.c-cardSweather {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	&__city {
+		font-weight: $fwMedium;
+		font-size: 18px;
+		font-family: $fontFamily__secondary;
+		text-transform: uppercase;
+		padding-right: 8px;
+	}
+	&__icon {
+		@include flexWidth(30px);
+		svg, img {
+			display: block;
+			width: 30px;
+			height: 30px;
+			object-fit: contain;
+		}
+	}
+	&__temp {
+		padding: 0 10px;
+		span {
+			display: block;
+			font-weight: $fwBold;
+			font-size: 24px;
+			font-style: italic;
+			text-transform: uppercase;
+			color: $white;
+			line-height: 1;
+			&.caption {
+				font-size: 14px;
+			}
+			&.temp {
+				font-size: 24px;
+			}
+		}
+		&.--min {
+			span.caption {
+				font-weight: $fwMedium;
+			}
+		}
+		&.--current {
+			display: none;
+		}
+	}
+	&__rain {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding-left: 4px;
+		i {
+			@include flexWidth(30px);
+			svg, img {
+				display: block;
+				width: 30px;
+				height: 30px;
+				object-fit: contain;
+			}
+		}
+		span {
+			font-weight: $fwMedium;
+			font-size: 18px;
+			font-family: $fontFamily__secondary;
+			text-transform: uppercase;
+			padding-left: 2px;
+		}
+	}
+
+	// themes
+	&.--white {
+		.c-cardSweather__city,
+		.c-cardSweather__rain span,
+		.c-cardSweather__temp span {
+			color: $white;
+		}
+		.c-cardSweather__rain svg path,
+		.c-cardSweather__icon svg path {
+			fill: $white;
+		}
+	}
+	&.--primary {
+		.c-cardSweather__city,
+		.c-cardSweather__rain span,
+		.c-cardSweather__temp span {
+			color: $primary;
+		}
+		.c-cardSweather__rain svg path,
+		.c-cardSweather__icon svg path {
+			fill: $primary;
+		}
+	}
+	&.--secondary {
+		.c-cardSweather__city,
+		.c-cardSweather__rain span,
+		.c-cardSweather__temp span {
+			color: $secondary;
+		}
+		.c-cardSweather__rain svg path,
+		.c-cardSweather__icon svg path {
+			fill: $secondary;
+		}
+	}
+
+	&.--onlyCurrentInfos {
+		justify-content: flex-start;
+		.c-cardSweather__rain {
+			display: none;
+		}
+		.c-cardSweather__icon {
+			margin-left: 5px;
+		}
+		.c-cardSweather__temp {
+			position: relative;
+			top: -1px;
+			&.--min,
+			&.--max {
+				display: none;
+			}
+			&.--current {
+				display: block;
+				span.temp {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
