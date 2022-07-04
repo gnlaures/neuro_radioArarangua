@@ -17,6 +17,9 @@
 @import "components/cSocialList";
 @import "components/cSocialUser";
 @import "components/cCardSweather.scss";
+@import "components/cAdsBanner.scss";
+@import "components/cMicTitle.scss";
+@import "components/cGridArticles.scss";
 
 @import "components/cForm.scss";
 @import "components/cSmartMenu.scss";
@@ -33,8 +36,11 @@
 
 // sections
 @import "sections/s404.scss";
+@import "sections/sDefaultSection.scss";
+@import "sections/sAd.scss";
 
 // layouts
 @import "layout/lPage";
 @import "layout/lNav";
 @import "layout/lFooter";
+@import "layout/lMainContent";

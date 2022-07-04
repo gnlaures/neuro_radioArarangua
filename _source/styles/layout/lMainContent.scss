@@ -1,0 +1,16 @@
+.l-mainContent {
+	padding: 40px 0;
+	&__content {
+		flex: 1 1 auto;
+		padding-right: 30px;
+		.s-defaultSection {
+			margin-bottom: 30px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__aside {
+		@include flexWidth(360px);
+	}
+}

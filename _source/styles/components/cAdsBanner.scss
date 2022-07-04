@@ -1,0 +1,10 @@
+.c-adsBanner {
+	display: block;
+	width: 100%;
+	* {
+		@include roundedAll();
+		overflow: hidden;
+		display: block;
+		width: 100%;
+	}
+}

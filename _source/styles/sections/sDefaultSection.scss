@@ -1,0 +1,25 @@
+.s-defaultSection {
+	&__head {
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	&__content {
+		display: block;
+		width: 100%;
+	}
+
+	&.--darken {
+		@include roundedAll();
+		overflow: hidden;
+		background: $secondary;
+		padding: 15px;
+		.c-micTitle {
+			&__title {
+				a {
+					color: $white;
+				}
+			}
+		}
+	}
+}
