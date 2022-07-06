@@ -1,10 +1,10 @@
 <div class="c-cardArticle">
     <div class="c-cardArticle__category">
-        <a href="#" class="c-tagCategory">Polícia</a>
+        <a href="#" class="c-tagCategory"><span>Polícia</span></a>
     </div>
     <a href="#" class="c-cardArticle__figure">
         <figure class="u-aspectRatio --ratio-4-3">
-            <img src="#" alt="Carnês do IPTU de Maracajá já estão sendo entregues nas residências">
+            <img src="media/img/content/cardArticle.jpg" alt="Carnês do IPTU de Maracajá já estão sendo entregues nas residências">
         </figure>
     </a>
     <div class="c-cardArticle__content">

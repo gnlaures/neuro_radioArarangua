@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="c-btnRadioOnOff --off c-btn --l --secondary" title="Ao Vivo">
+                        <a href="#" class="c-btnRadioOnOff --on c-btn --l --secondary" title="Ao Vivo">
                             <div class="c-btn__content">
                                 <i class="c-btn__icon"><span></span></i>
                                 <span class="c-btn__caption">Ao Vivo</span>

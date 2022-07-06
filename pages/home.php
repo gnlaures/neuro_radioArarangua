@@ -12,24 +12,12 @@
                 <section class="s-defaultSection">
                     <div class="s-defaultSection__content">
                         <ul class="c-gridArticles --simple">
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta inventore ipsum iusto laborum nostrum quae quam velit veniam voluptates? Adipisci alias aperiam commodi culpa, eligendi error fuga illo illum minus nostrum, perferendis quibusdam quidem quisquam repellat, reprehenderit voluptas voluptatem?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta inventore ipsum iusto laborum nostrum quae quam velit veniam voluptates? Adipisci alias aperiam commodi culpa, eligendi error fuga illo illum minus nostrum, perferendis quibusdam quidem quisquam repellat, reprehenderit voluptas voluptatem?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
                         </ul>
                     </div>
                 </section>
@@ -48,15 +36,9 @@
                     </div>
                     <div class="s-defaultSection__content">
                         <ul class="c-gridArticles --min">
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta inventore ipsum iusto laborum nostrum quae quam velit veniam voluptates? Adipisci alias aperiam commodi culpa, eligendi error fuga illo illum minus nostrum, perferendis quibusdam quidem quisquam repellat, reprehenderit voluptas voluptatem?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
                         </ul>
                     </div>
                 </section>
@@ -75,15 +57,9 @@
                     </div>
                     <div class="s-defaultSection__content">
                         <ul class="c-gridArticles --min">
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta inventore ipsum iusto laborum nostrum quae quam velit veniam voluptates? Adipisci alias aperiam commodi culpa, eligendi error fuga illo illum minus nostrum, perferendis quibusdam quidem quisquam repellat, reprehenderit voluptas voluptatem?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
                         </ul>
                     </div>
                 </section>
@@ -102,15 +78,9 @@
                     </div>
                     <div class="s-defaultSection__content">
                         <ul class="c-gridArticles --min">
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta inventore ipsum iusto laborum nostrum quae quam velit veniam voluptates? Adipisci alias aperiam commodi culpa, eligendi error fuga illo illum minus nostrum, perferendis quibusdam quidem quisquam repellat, reprehenderit voluptas voluptatem?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
+                            <li><?php include('parts/components/c-cardArticle.php')?></li>
                         </ul>
                     </div>
                 </section>
@@ -128,16 +98,9 @@
                         </div>
                     </div>
                     <div class="s-defaultSection__content">
-                        <ul class="c-gridArticles --min">
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta inventore ipsum iusto laborum nostrum quae quam velit veniam voluptates? Adipisci alias aperiam commodi culpa, eligendi error fuga illo illum minus nostrum, perferendis quibusdam quidem quisquam repellat, reprehenderit voluptas voluptatem?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid consequatur deleniti et magnam neque odio quas sint temporibus?
-                            </li>
+                        <ul class="c-gridArticles --simple">
+                            <li>c-video</li>
+                            <li>c-cardSweather</li>
                         </ul>
                     </div>
                 </section>
