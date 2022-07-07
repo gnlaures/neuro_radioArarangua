@@ -42,12 +42,20 @@
     </div>
     <div class="c-sidebarWidget --ads">
         <div class="c-sidebarWidget__content">
-            <?php include('parts/components/c-adsBanner.php'); ?>
+            <?php $cAd = array(
+                    'link' => '#',
+                    'title' => 'Publicidade',
+                    'img' => 'media/img/content/ad_2.jpg');
+                include('parts/components/c-adsBanner.php');?>
         </div>
     </div>
     <div class="c-sidebarWidget --ads">
         <div class="c-sidebarWidget__content">
-            <?php include('parts/components/c-adsBanner.php'); ?>
+            <?php $cAd = array(
+                    'link' => '#',
+                    'title' => 'Publicidade',
+                    'img' => 'media/img/content/ad_3.jpg');
+                include('parts/components/c-adsBanner.php');?>
         </div>
     </div>
     <div class="c-sidebarWidget --listCards --micTitle">
@@ -73,7 +81,11 @@
     </div>
     <div class="c-sidebarWidget --ads">
         <div class="c-sidebarWidget__content">
-            <?php include('parts/components/c-adsBanner.php'); ?>
+            <?php $cAd = array(
+                    'link' => '#',
+                    'title' => 'Publicidade',
+                    'img' => 'media/img/content/ad_4.jpg');
+                include('parts/components/c-adsBanner.php');?>
         </div>
     </div>
     <div class="c-sidebarWidget --grid --micTitle">

@@ -3,7 +3,7 @@
 $title = 'Rádio Araranguá';
 // $pagina = explode('neuro_decortiles/', $_SERVER['REQUEST_URI']);
 $pagina = explode('/', $_SERVER['REQUEST_URI']);
-$classOnBody = 'p-inner';
+$classPage = 'p-inner';
 
 // loop pages
 switch ($pagina[1]) {
@@ -22,14 +22,14 @@ switch ($pagina[1]) {
     case 'home' :
         $file = 'pages/home.php';
         $title_page = $title;
-        $classOnBody = 'p-home';
+        $classPage = 'p-home';
         break;
 
     // inner pages
     case 'quem-somos' :
         $file = 'pages/aboutUs.php';
         $title_page = 'Quem Somos | '.$title;
-        $classOnBody = 'p-inner p-aboutUs';
+        $classPage = 'p-inner p-aboutUs';
         break;
 
     // 404
@@ -43,14 +43,34 @@ switch ($pagina[1]) {
 // head + nav
 include("parts/_partials/head.php");
 include("parts/layout/l-nav.php");
+?>
 
-// render page content
-include($file);
+<main class="l-page <?php echo $classPage; ?>">
+    <section class="s-defaultSection s-ad">
+        <div class="s-defaultSection__content">
+            <div class="u-container">
+                <?php $cAd = array(
+                    'link' => '#',
+                    'title' => 'Publicidade',
+                    'img' => 'media/img/content/ad_1.jpg');
+                include('parts/components/c-adsBanner.php');?>
+            </div>
+        </div>
+    </section>
+    <div class="l-mainContent">
+        <div class="u-container u-dflex u-aifs u-jcsb">
+            <div class="l-mainContent__content">
+                <?php include($file); ?>
+            </div>
+            <div class="l-mainContent__aside">
+                <?php include('parts/layout/l-sidebar.php');?>
+            </div>
+        </div>
+    </div>
+</main>
 
-// footer
+<?php
 // include("parts/layout/l-footer.php");
-
-// end
 include("parts/_partials/end.php");
 ?>
 

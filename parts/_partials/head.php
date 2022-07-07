@@ -59,5 +59,5 @@
     <link href="dist/styles-min.css" type="text/css" rel="stylesheet" />
     </head>
 
-    <body class="<?php echo $classOnBody; ?>">
+    <body class="<?php echo $classPage; ?>">
 
