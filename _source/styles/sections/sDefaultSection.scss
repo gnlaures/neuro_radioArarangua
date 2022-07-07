@@ -7,6 +7,12 @@
 	&__content {
 		display: block;
 		width: 100%;
+		> .c-responsiveGrid {
+			@include calcWidthForPositionNegative(-6px);
+			> li {
+				padding: 6px;
+			}
+		}
 	}
 
 	&.--darken {

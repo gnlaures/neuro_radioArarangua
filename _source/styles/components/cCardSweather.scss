@@ -120,6 +120,29 @@
 		}
 	}
 
+	// theme variant
+	&.--iconSecondary {
+		.c-cardSweather__icon {
+			svg path {
+				fill: $secondary;
+			}
+		}
+	}
+	&.--iconPrimary {
+		.c-cardSweather__icon {
+			svg path {
+				fill: $primary;
+			}
+		}
+	}
+	&.--iconWhite {
+		.c-cardSweather__icon {
+			svg path {
+				fill: $white;
+			}
+		}
+	}
+
 	// modifiers
 	&.--onlyCurrentInfos {
 		justify-content: flex-start;

@@ -34,7 +34,6 @@
 			}
 		}
 	}
-
 	&.--min {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -67,6 +66,14 @@
 					@extend .--small;
 					@extend .--horizontal;
 				}
+			}
+		}
+	}
+	&.--list {
+		> li {
+			margin-bottom: 30px;
+			&:last-of-type {
+				margin-bottom: 0;
 			}
 		}
 	}

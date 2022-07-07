@@ -1,4 +1,4 @@
-<div class="c-cardArticle">
+<div class="c-cardArticle <?php echo $cCardArticle["extraClass"] ?>">
     <div class="c-cardArticle__category">
         <a href="#" class="c-tagCategory"><span>Polícia</span></a>
     </div>
