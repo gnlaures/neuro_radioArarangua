@@ -1,6 +1,6 @@
 <a href="#" class="c-cardColumnist">
     <figure class="c-cardColumnist__figure">
-        <img src="#" alt="">
+        <img src="media/img/content/colunista.png" alt="Jairo Silva">
     </figure>
     <div class="c-cardColumnist__content">
         <h5>Jairo Silva</h5>

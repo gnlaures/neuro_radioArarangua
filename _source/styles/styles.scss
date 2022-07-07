@@ -14,26 +14,31 @@
 @import "components/cBtn.scss";
 @import "components/cBtnIcon.scss";
 @import "components/cBtnRadioOnOff.scss";
+@import "components/cResponsiveGrid.scss";
 @import "components/cSocialList";
 @import "components/cSocialUser";
+@import "components/cSearch.scss";
+@import "components/cListSweather.scss";
 @import "components/cCardSweather.scss";
 @import "components/cSmartMenu.scss";
 @import "components/cAdsBanner.scss";
 @import "components/cMicTitle.scss";
 @import "components/cGridArticles.scss";
 @import "components/cCardArticle.scss";
+@import "components/cCardPodcast.scss";
+@import "components/cCardColumnist.scss";
+@import "components/cVideo.scss";
+@import "components/cTagCategory.scss";
+@import "components/cSidebarWidget.scss";
 
 @import "components/cForm.scss";
-@import "components/cResponsiveGrid.scss";
 @import "components/cBrand.scss";
 @import "components/cHamburguer.scss";
 @import "components/cToggleList.scss";
 @import "components/cContactList.scss";
 @import "components/cContactForm.scss";
 @import "components/cFeedbackForm.scss";
-@import "components/cVideo.scss";
 @import "components/cPlainText.scss";
-@import "components/cSearch.scss";
 
 // sections
 @import "sections/s404.scss";
@@ -45,3 +50,4 @@
 @import "layout/lNav";
 @import "layout/lFooter";
 @import "layout/lMainContent";
+@import "layout/lSidebar";

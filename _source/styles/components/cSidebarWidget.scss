@@ -1,0 +1,89 @@
+.c-sidebarWidget {
+	&__title {
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+		> h4 {
+			color: $primary;
+			font-weight: $fwBold;
+			font-size: 25px;
+		}
+	}
+
+	&.--micTitle {
+		.c-sidebarWidget__title {
+			margin-bottom: 10px;
+		}
+	}
+	&.--listArticles {
+		.c-sidebarWidget__content {
+			> ul {
+				li {
+					margin-bottom: 15px;
+					padding-bottom: 15px;
+					border-bottom: 1px solid $gray;
+					&:last-of-type {
+						margin-bottom: 0;
+						padding-bottom: 0;
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+		.c-cardArticle {
+			@extend .--sidebar;
+		}
+	}
+	&.--listLinks {
+		.c-smartMenu {
+			> ul {
+				> li {
+					margin-bottom: 15px;
+					padding-bottom: 15px;
+					border-bottom: 1px solid $gray;
+					&:last-of-type {
+						margin-bottom: 0;
+						padding-bottom: 0;
+						border-bottom: 0;
+					}
+					> a {
+						&:hover {
+							color: $primary;
+						}
+					}
+					a {
+						color: $text;
+						font-weight: $fwSemiBold;
+						text-transform: none;
+						&:hover {
+							&:after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.--listCards {
+		.c-sidebarWidget__content {
+			> ul {
+				li {
+					margin-bottom: 15px;
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	&.--grid {
+		.c-responsiveGrid {
+			@include calcWidthForPositionNegative(-5px);
+			> li {
+				display: flex;
+				padding: 5px;
+			}
+		}
+	}
+}

@@ -25,6 +25,7 @@
 		font-family: $fontFamily__secondary;
 		text-transform: uppercase;
 		padding-right: 8px;
+		font-style: italic;
 	}
 	&__icon {
 		@include flexWidth(30px);
@@ -119,6 +120,7 @@
 		}
 	}
 
+	// modifiers
 	&.--onlyCurrentInfos {
 		justify-content: flex-start;
 		.c-cardSweather__rain {
@@ -139,6 +141,34 @@
 				span.temp {
 					font-size: 20px;
 				}
+			}
+		}
+	}
+	&.--onlyMinMax {
+		.c-cardSweather__temp {
+			&.--current {
+				display: none;
+			}
+		}
+	}
+	&.--fixedSizes {
+		justify-content: flex-end;
+		.c-cardSweather__city {
+			flex: 1 1 auto;
+			white-space: normal;
+		}
+		.c-cardSweather__icon {
+			margin-right: 10px;
+		}
+		.c-cardSweather__temp {
+			@include flexWidth(50px);
+			padding: 0;
+		}
+		.c-cardSweather__rain {
+			@include flexWidth(76px);
+			padding-left: 0;
+			span {
+				padding-left: 0;
 			}
 		}
 	}

@@ -1,0 +1,35 @@
+.c-cardPodcast {
+	@include transition();
+	@include roundedAll();
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background: $white;
+	padding: 15px;
+	border: 1px solid $white;
+	&__title {
+		@include transition();
+		font-size: 16px;
+		color: $secondary;
+		padding-right: 15px;
+		flex: 1 1 auto;
+	}
+	&__icon {
+		@include flexWidth(18px);
+		* {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&:hover {
+		border: 1px solid $cardBorder;
+		.c-cardPodcast {
+			&__title {
+				color: $secondaryDark;
+			}
+		}
+	}
+}

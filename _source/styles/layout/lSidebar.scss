@@ -1,0 +1,19 @@
+$lSidebar__gapWidgets: 30px;
+
+.l-sidebar {
+	display: block;
+	width: 100%;
+	&__group {
+		@include roundedAll();
+		background: $white;
+		padding: 25px;
+		margin-bottom: $lSidebar__gapWidgets;
+	}
+
+	.c-sidebarWidget {
+		margin-bottom: $lSidebar__gapWidgets;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
