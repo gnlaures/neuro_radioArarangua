@@ -1,14 +1,14 @@
-$field_height: 40px;
-$field_padding: 20px 0 20px 0;
-$field_radius: 0;
-$fields_borderColor: $gray;
-$fields_borderColor_focus: $black;
+$field_height: 48px;
+$field_padding: 0 20px;
+$field_radius: $defaultRadius;
+$fields_borderColor: $text;
+$fields_borderColor_focus: $primary;
 $field_bg: transparent;
 $field_bg_focus: transparent;
 $spacer_bg: $gray;
-$field_checks_size: 20px;
+$field_checks_size: 24px;
 
-.c-form {
+.c-forma {
     &__fieldsHero {
         display: flex;
         flex-direction: row;
@@ -143,11 +143,11 @@ $field_checks_size: 20px;
     input, select, textarea {
         @include transition();
         @include roundedAll($field_radius);
-        @include paragraphs();
+        @include paragraphs($fs: 16px);
         background: $field_bg;
-        border-bottom: 1px solid $fields_borderColor;
+        border: 2px solid $fields_borderColor;
         @include placeholder {
-            @include paragraphs($tc: $placeholderText);
+            @include paragraphs($fs: 16px, $tc: $placeholderText);
         }
         &:focus {
             border-color: $fields_borderColor_focus;
@@ -156,7 +156,8 @@ $field_checks_size: 20px;
     }
     input, select {
         height: $field_height;
-        padding: 0 $field_padding;
+        line-height: $field_height;
+        padding: $field_padding;
     }
     select {
         * {
@@ -603,50 +604,163 @@ $field_checks_size: 20px;
             margin-top: 0;
         }
     }
+}
 
-    // themes
-    &.--fullBorder {
-        // fields
-        input, select, textarea {
-            border: 1px solid $fields_borderColor;
-            padding-left: 15px;
-            padding-right: 15px;
-            @include placeholder {
-                text-transform: uppercase;
-                font-size: 14px;
-            }
-            &:focus {
-                border-bottom-color: $fields_borderColor_focus;
-                background: $field_bg_focus;
+// =======================================
+// group
+// cols
+// fields
+// list
+//
+//
+
+.c-form {
+    &__hero {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    &__hero {
+        @include calcWidthForPositionNegative(-10px);
+    }
+    &__group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &__field {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+    &__feedback {
+        display: block;
+    }
+}
+
+.c-field {
+    > label {
+        display: block;
+        width: 100%;
+        color: $text;
+        font-weight: $fwBold;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    > input,
+    > .c-field__file input,
+    > select,
+    > textarea {
+        @include transition();
+        @include roundedAll();
+        display: block;
+        width: 100%;
+        border: 2px solid $text;
+        background: transparent;
+        font-weight: $fwMedium;
+        font-size: 16px;
+        color: $text;
+        @include placeholder() {
+            color: $placeholderText;
+        }
+        &:focus {
+            border-color: $primary;
+        }
+    }
+
+    > input,
+    > .c-field__file input,
+    > select {
+        line-height: 46px;
+        height: 48px;
+        padding: 0 20px;
+    }
+
+    > textarea {
+        line-height: 1.25;
+        height: 180px;
+        min-height: 100px;
+        max-height: 70vh;
+        padding: 15px 20px;
+        resize: vertical;
+    }
+
+    &.--btn {
+        .c-btn {
+            max-width: 170px;
+            border-width: 2px;
+        }
+    }
+    &.--confirmRead {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 0;
+        input {
+            @include roundedAll(4px);
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            &:checked {
+                background: url(#{$media_icons}/icon_checked.svg) !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                background-position: center !important;
             }
         }
-
-        // modifiers
-        .c-form__field {
-            &.--check {
-                input {
-                    padding-left: 0;
-                    padding-right: 0;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    height: $field_checks_size;
-                    width: $field_checks_size;
+        label {
+            @include paragraphs($fs: 16px);
+            font-weight: $fwSemiBold;
+            text-transform: inherit;
+            padding-left: 10px;
+            margin-bottom: 0;
+            a {
+                color: $text;
+                font-weight: $fwSemiBold;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                    color: $secondary;
                 }
             }
-            &.--select {
-                .selectBox {
-                    select {
-                        padding-right: 30px;
-                    }
-                }
-                .inputBox {
-                    input {
-                        padding-right: 30px;
-                    }
-                    &:after {
-                        right: 15px;
-                    }
-                }
+        }
+    }
+    &.--file {
+        .c-field__file {
+            display: block;
+            width: 100%;
+            position: relative;
+            input[type=file] {
+                @include opacity(0);
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
+            }
+            input[type=text] {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                pointer-events: none;
+            }
+            svg {
+                display: block;
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                top: 50%;
+                margin-top: -11px;
+                right: 15px;
+                z-index: 1;
+                pointer-events: none;
             }
         }
     }

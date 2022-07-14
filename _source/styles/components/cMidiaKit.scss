@@ -1,0 +1,27 @@
+.c-midiaKit {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	&__content {
+		flex: 1 1 auto;
+		padding-right: 25px;
+	}
+	&__cta {
+		@include flexWidth(250px);
+	}
+
+	.c-plainText p {
+		font-size: 20px;
+	}
+	.c-btn {
+		&__icon {
+			svg path {
+				fill: $primary;
+			}
+		}
+		&__content {
+			top: -1px;
+		}
+	}
+}

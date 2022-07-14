@@ -1,13 +1,7 @@
 .c-cardColumnist {
-	@include transition();
-	@include roundedAll();
-	display: flex;
+	@include preset__cardBase();
 	flex-direction: column;
 	align-items: flex-start;
-	background: $white;
-	padding: 15px;
-	width: 100%;
-	border: 1px solid $white;
 	&__figure {
 		display: block;
 		width: 100%;
@@ -29,11 +23,85 @@
 			color: $primary;
 			text-transform: uppercase;
 			font-size: 14px;
+			line-height: 1;
 			letter-spacing: 1px;;
 		}
 	}
 
-	&:hover {
-		border: 1px solid $cardBorder;
+	&.--horizontal {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		.c-cardColumnist__figure {
+			@include flexWidth(110px);
+		}
+		.c-cardColumnist__content {
+			flex: 1 1 auto;
+			padding-left: 15px;
+		}
+	}
+	&.--transparent {
+		background: transparent;
+		border-color: transparent;
+		padding: 0;
+		&:hover {
+			border-color: transparent;
+		}
+	}
+	&.--more {
+		&:hover {
+			.c-cardColumnist__content {
+				&:after {
+					@include scale(1, center);
+				}
+			}
+		}
+		.c-cardColumnist__content {
+			width: 100%;
+			padding-right: 50px;
+			position: relative;
+			&:after {
+				@include scale(0.95, center);
+				@include transition();
+				content: '';
+				display: block;
+				width: 35px;
+				height: 35px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				@include bg(icons, 'icon_plus.svg', no-repeat, contain, inherit, center);
+			}
+		}
+	}
+	&.--uppercase {
+		* {
+			text-transform: uppercase;
+			letter-spacing: inherit;
+			font-style: italic;
+			font-family: $fontFamily__secondary;
+			line-height: 1;
+		}
+		.c-cardColumnist__content h5 {
+			color: $primary;
+			font-weight: $fwExtraBold;
+			font-size: 18px;
+			margin-bottom: 4px;
+		}
+		.c-cardColumnist__content span {
+			color: $textLight;
+			font-size: 18px;
+			font-weight: $fwMedium;
+		}
+
+		&:hover {
+			.c-cardColumnist__content h5 {
+				color: $primaryDark;
+			}
+			.c-cardColumnist__content span {
+				color: $text;
+			}
+		}
 	}
 }

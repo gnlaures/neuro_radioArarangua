@@ -4,7 +4,7 @@
     }
     .c-btn__icon {
         @include flexWidth(42px);
-        padding-right: 12px;
+        padding: 0 6px;
         svg, img {
             width: 30px;
             height: 30px;
@@ -20,7 +20,7 @@
     }
     .c-btn__icon {
         @include flexWidth(34px);
-        padding-right: 10px;
+        padding: 0 5px;
         svg, img {
             width: 24px;
             height: 24px;
@@ -37,7 +37,7 @@
     }
     .c-btn__icon {
         @include flexWidth(28px);
-        padding-right: 8px;
+        padding: 0 4px;
         svg, img {
             width: 20px;
             height: 20px;
@@ -53,7 +53,8 @@
     @include transition();
     @include roundedAll();
     display: inline-block;
-    max-width: 250px;
+    max-width: 400px;
+    cursor: pointer;
     &__content {
         @include transforms(skewX(10deg), center);
         display: flex;
@@ -76,6 +77,7 @@
         font-weight: $fwBold;
         text-transform: uppercase;
         position: relative;
+        padding: 0 5px;
     }
 
     // themes
@@ -163,14 +165,66 @@
         // themes
         &.--primary {
             border-color: $primary;
+            span {
+                color: $primary;
+            }
+            &.--iconHoverStroke {
+                svg path {
+                    stroke: $primary;
+                }
+            }
+            &.--iconHoverFill {
+                svg path {
+                    fill: $primary;
+                }
+            }
             &:hover {
                 border-color: $primaryDark;
+                span {
+                    color: $white;
+                }
+                &.--iconHoverStroke {
+                    svg path {
+                        stroke: $white;
+                    }
+                }
+                &.--iconHoverFill {
+                    svg path {
+                        fill: $white;
+                    }
+                }
             }
         }
         &.--secondary {
             border-color: $secondary;
+            span {
+                color: $secondary;
+            }
+            &.--iconHoverStroke {
+                svg path {
+                    stroke: $secondary;
+                }
+            }
+            &.--iconHoverFill {
+                svg path {
+                    fill: $secondary;
+                }
+            }
             &:hover {
                 border-color: $secondaryDark;
+                span {
+                    color: $white;
+                }
+                &.--iconHoverStroke {
+                    svg path {
+                        stroke: $white;
+                    }
+                }
+                &.--iconHoverFill {
+                    svg path {
+                        fill: $white;
+                    }
+                }
             }
         }
         &.--wpp {

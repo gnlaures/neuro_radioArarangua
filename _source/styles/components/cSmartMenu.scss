@@ -170,6 +170,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
         > ul {
             > li {
                 > ul {
+                    @include scroll($bg: $white2, $bar: $gray, $size: 6px);
                     background: $white;
                 }
             }
@@ -264,6 +265,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
         > ul {
             > li {
                 ul {
+                    @include scroll($bg: $secondary, $bar: $primary, $size: 6px);
                     background: $secondary;
                     a {
                         color: $white;
@@ -317,6 +319,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
         > ul {
             > li {
                 ul {
+                    @include scroll($bg: $primary, $bar: $secondary, $size: 6px);
                     background: $primary;
                     a {
                         color: $secondaryDark;
@@ -369,6 +372,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
         > ul {
             > li {
                 ul {
+                    @include scroll($bg: $white3, $bar: $gray, $size: 6px);
                     background: $white2;
                     a {
                         color: $text;
@@ -521,7 +525,7 @@ $c_smartMenu_defaultPaddingLeft: 15px;
                 margin-right: 0;
                 > ul {
                     @include translate(0,0,center);
-                    @include roundedAll(0);
+                    @include roundedAll();
                     width: 100%;
                     position: relative;
                     left: 0;

@@ -1,41 +1,29 @@
 @mixin paragraphs (
     $tc: $text,
-    $fw: $fwLight,
-    $fs: 18px,
+    $fw: $fwRegular,
+    $fs: 21px,
     $lh: 1.4,
-    $ls: 1.5px,
-    $important: false
-) {
+    $important: false) {
     color: $tc is-important($important);
     font-size: $fs is-important($important);
     font-weight: $fw is-important($important);
     line-height: $lh is-important($important);
-    letter-spacing: $ls;
     strong, b {
         font-weight: $fwBold;
-        color: $tc;
-        font-size: $fs;
-        line-height: $lh;
+    }
+    a {
+        font-weight: $fw is-important($important);
+        color: $primary;
+        &:hover {
+            color: $primaryDark;
+            text-decoration: underline;
+        }
     }
     u {
         text-decoration: underline;
     }
     i {
         font-style: italic;
-    }
-    a {
-        color: $tc;
-        text-decoration: none;
-        font-weight: $fw;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    @media screen and (max-width: 430px) {
-        font-size: $fs - 2;
-        a, strong {
-            font-size: $fs - 2;
-        }
     }
 }
 
@@ -59,56 +47,18 @@
     }
 }
 
-@mixin titles($arrow: false, $fs: 30px, $tc: $text, $fw: $fwLight) {
-    display: block;
-    font-weight: $fw;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-size: $fs;
-    color: $tc;
-    position: relative;
-    @if $arrow {
-        padding-left: 20px;
-        &:before {
-            content: '>';
-            display: block;
-            font-weight: $fwLight;
-            font-size: 30px;
-            color: $text;
-            position: absolute;
-            top: -4px;
-            left: 0;
-        }
-    }
-}
-@mixin titlesSerif($fs: 55px, $tc: $white) {
-    font-family: $fontFamily__default;
-    font-size: $fs;
-    color: $tc;
-    font-weight: $fwBold;
-    position: relative;
-    padding-bottom: 50px;
-    span {
-        display: block;
-        font-size: $fs + 15;
-        font-family: $fontFamily__default;
-        font-weight: $fwBold;
-    }
-    &:before {
-        content: '';
-        display: block;
-        width: 65px;
-        height: 10px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: $white;
-    }
 
-    @media screen and (max-width: 500px) {
-        font-size: $fs - 25px;
-        span {
-            font-size: $fs - 5px
-        }
+//
+@mixin preset__cardBase($pad: 15px) {
+    @include transition();
+    @include roundedAll();
+    background: $white;
+    padding: $pad;
+    border: 1px solid $white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    &:hover {
+        border: 1px solid $cardBorder;
     }
 }

@@ -1,0 +1,79 @@
+.c-footerWidget {
+	&__header {
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+		h4 {
+			color: $primary;
+			font-size: 20px;
+			font-weight: $fwBold;
+			text-transform: uppercase;
+		}
+	}
+	&__content {
+		display: block;
+		width: 100%;
+	}
+	&.--mainMenu {
+		ul {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			li {
+				margin-right: 25px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			a {
+				@include transition();
+				color: $white;
+				font-family: $fontFamily__secondary;
+				font-style: italic;
+				font-size: 14px;
+				text-transform: uppercase;
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+	&.--address {
+		width: 100%;
+		max-width: 670px;
+		address {
+			@include paragraphs($tc: $white);
+			font-style: normal;
+		}
+	}
+	&.--copyrightMenu {
+		ul {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			li {
+				margin-right: 10px;
+				padding-right: 10px;
+				border-right: 1px solid $white;
+				&:last-child {
+					margin-right: 0;
+					border-right: 0;
+					padding-right: 0;
+				}
+			}
+			a {
+				@include transition();
+				color: $white;
+				font-weight: $fwMedium;
+				font-family: $fontFamily__secondary;
+				font-size: 14px;
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+	&.--neurodigital {
+		@include calcWidthForPositionNegative(-15px);
+	}
+}

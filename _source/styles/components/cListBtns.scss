@@ -1,0 +1,42 @@
+.c-listBtns {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	&.--pad5 {
+		@include calcWidthForPositionNegative(-5px);
+		> li {
+			padding: 5px;
+		}
+	}
+	&.--pad10 {
+		@include calcWidthForPositionNegative(-10px);
+		> li {
+			padding: 10px;
+		}
+	}
+	&.--pad15 {
+		@include calcWidthForPositionNegative(-15px);
+		> li {
+			padding: 15px;
+		}
+	}
+	&.--pad20 {
+		@include calcWidthForPositionNegative(-20px);
+		> li {
+			padding: 20px;
+		}
+	}
+	&.--pad25 {
+		@include calcWidthForPositionNegative(-25px);
+		> li {
+			padding: 25px;
+		}
+	}
+	&.--pad30 {
+		@include calcWidthForPositionNegative(-30px);
+		> li {
+			padding: 30px;
+		}
+	}
+}

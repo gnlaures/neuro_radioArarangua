@@ -1,3 +1,5 @@
+<!--Utilize o modificado --sticky apenas em UM widget, preferencialmente no último.-->
+
 <aside class="l-sidebar">
     <div class="l-sidebar__group">
         <div class="c-sidebarWidget --listArticles">
@@ -6,8 +8,14 @@
             </div>
             <div class="c-sidebarWidget__content">
                 <ul>
-                    <li><?php include('parts/components/c-cardArticle.php')?></li>
-                    <li><?php include('parts/components/c-cardArticle.php')?></li>
+                    <li>
+                        <?php $cCardArticle = array('extraClass' => '');
+                        include('parts/components/c-cardArticle.php');?>
+                    </li>
+                    <li>
+                        <?php $cCardArticle = array('extraClass' => '');
+                        include('parts/components/c-cardArticle.php');?>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -73,9 +81,33 @@
         </div>
         <div class="c-sidebarWidget__content">
             <ul>
-                <li><?php include('parts/components/c-cardPodcast.php')?></li>
-                <li><?php include('parts/components/c-cardPodcast.php')?></li>
-                <li><?php include('parts/components/c-cardPodcast.php')?></li>
+                <li>
+                    <?php
+                        $cCardPodcast = array(
+                            'extraClass' => '',
+                            'link' => '#',
+                            'title' => 'Vereador eleito em Balneário Arroio do Silva, Alan Silva avalia a campanha e fala sobre seu futuro mandato.');
+                        include('parts/components/c-cardPodcast.php')
+                        ?>
+                </li>
+                <li>
+                    <?php
+                        $cCardPodcast = array(
+                            'extraClass' => '',
+                            'link' => '#',
+                            'title' => 'Vereador eleito em Balneário Arroio do Silva, Alan Silva avalia a campanha e fala sobre seu futuro mandato.');
+                        include('parts/components/c-cardPodcast.php')
+                    ?>
+                </li>
+                <li>
+                    <?php
+                        $cCardPodcast = array(
+                            'extraClass' => '',
+                            'link' => '#',
+                            'title' => 'Vereador eleito em Balneário Arroio do Silva, Alan Silva avalia a campanha e fala sobre seu futuro mandato.');
+                        include('parts/components/c-cardPodcast.php')
+                    ?>
+                </li>
             </ul>
         </div>
     </div>
@@ -102,15 +134,64 @@
             </div>
         </div>
         <div class="c-sidebarWidget__content">
-            <ul class="c-responsiveGrid --start"
+            <ul class="c-responsiveGrid --start --fitContent"
                 data-maxw-breaks="400"
                 data-maxw-cols="1"
                 data-cols-init="2">
-                <li><?php include('parts/components/c-cardColumnist.php')?></li>
-                <li><?php include('parts/components/c-cardColumnist.php')?></li>
-                <li><?php include('parts/components/c-cardColumnist.php')?></li>
-                <li><?php include('parts/components/c-cardColumnist.php')?></li>
+                <li>
+                    <?php
+                    $cCardColumnist = array(
+                        'extraClass' => '',
+                        'link' => '#',
+                        'img' => 'media/img/content/colunista.png',
+                        'name' => 'Jairo Silva',
+                        'tagline' => 'Esportivo');
+                    include('parts/components/c-cardColumnist.php')
+                    ?>
+                </li>
+                <li>
+                    <?php
+                    $cCardColumnist = array(
+                        'extraClass' => '',
+                        'link' => '#',
+                        'img' => 'media/img/content/colunista.png',
+                        'name' => 'Jairo Silva',
+                        'tagline' => 'Entretenimento & Viagens');
+                    include('parts/components/c-cardColumnist.php')
+                    ?>
+                </li>
+                <li>
+                    <?php
+                    $cCardColumnist = array(
+                        'extraClass' => '',
+                        'link' => '#',
+                        'img' => 'media/img/content/colunista.png',
+                        'name' => 'Jairo Silva',
+                        'tagline' => 'Política');
+                    include('parts/components/c-cardColumnist.php')
+                    ?>
+                </li>
+                <li>
+                    <?php
+                    $cCardColumnist = array(
+                        'extraClass' => '',
+                        'link' => '#',
+                        'img' => 'media/img/content/colunista.png',
+                        'name' => 'Jairo Silva',
+                        'tagline' => 'Saúde');
+                    include('parts/components/c-cardColumnist.php')
+                    ?>
+                </li>
             </ul>
+        </div>
+    </div>
+    <div class="c-sidebarWidget --ads --sitcky">
+        <div class="c-sidebarWidget__content">
+            <?php $cAd = array(
+                'link' => '#',
+                'title' => 'Publicidade',
+                'img' => 'media/img/content/ad_5.jpg');
+            include('parts/components/c-adsBanner.php');?>
         </div>
     </div>
 </aside>

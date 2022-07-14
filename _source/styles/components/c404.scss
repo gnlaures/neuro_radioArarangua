@@ -1,0 +1,23 @@
+.c-error404 {
+	display: block;
+	width: 100%;
+	max-width: 380px;
+	margin: 0 auto;
+	padding: 40px 0;
+	* {
+		text-align: center;
+	}
+	h2 {
+		color: $secondary;
+		text-transform: uppercase;
+		font-weight: $fwBold;
+		font-size: 52px;
+	}
+	p {
+		@include paragraphs();
+		margin: 10px 0 18px 0;
+	}
+	.c-btn {
+		width: 100%;
+	}
+}

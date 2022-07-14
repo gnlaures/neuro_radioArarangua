@@ -1,0 +1,53 @@
+.c-columnistResume {
+	display: block;
+	width: 580px;
+	margin: 0 auto;
+	padding: 30px 0 20px 0;
+	&__head {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 30px;
+		figure {
+			@include flexWidth(260px);
+			* {
+				display: block;
+				width: 100%;
+			}
+		}
+		div {
+			flex: 1 1 auto;
+			padding-left: 20px;
+			* {
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-weight: $fwBold;
+			}
+			h5 {
+				color: $secondary;
+				font-style: italic;
+				font-size: 36px;
+				margin-bottom: 10px;
+			}
+			span {
+				color: $primary;
+				text-transform: uppercase;
+				font-size: 20px;
+				line-height: 1;
+				letter-spacing: 1px;;
+			}
+		}
+	}
+	&__content {
+		.c-plainText {
+			@include preset__cardBase();
+			padding: 20px 25px;
+			@extend .--article;
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.c-shareOptions {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	width: fit-content;
+	.c-btn {
+		@include transforms(skewX(00deg), center);
+		position: relative;
+		cursor: initial;
+		z-index: 2;
+		.c-btn__content {
+			@include transforms(skewX(0deg), center);
+		}
+		.c-btn__icon svg path {
+			fill: $secondary;
+		}
+		&:hover {
+			border-color: transparent !important;
+			.c-btn__icon svg path {
+				fill: $white;
+			}
+		}
+	}
+	.c-socialList {
+		@include opacity(0);
+		@include transition();
+		@include transforms(skewX(-10deg), center);
+		@include roundedAll();
+		pointer-events: none;
+		background: $secondaryLight;
+		height: 48px;
+		padding-left: 30px;
+		padding-right: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		flex-wrap: nowrap;
+		li {
+			@include transforms(skewX(10deg), center);
+		}
+	}
+
+	&:hover {
+		.c-btn {
+			border-color: transparent !important;
+			background: $secondary;
+		}
+		.c-btn .c-btn__caption {
+			color: $white;
+		}
+		.c-btn .c-btn__icon svg path {
+			fill: $white;
+		}
+
+		.c-socialList {
+			@include opacity(1);
+			padding-left: 220px;
+			left: 20px;
+			pointer-events: inherit;
+		}
+	}
+}

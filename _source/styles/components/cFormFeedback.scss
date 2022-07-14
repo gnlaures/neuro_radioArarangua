@@ -1,0 +1,65 @@
+$cFeedbackFormIconSize: 60px;
+
+.c-feedbackForm {
+    &__status {
+        padding: 40px;
+        &__icon {
+            @include flexWidth($cFeedbackFormIconSize);
+            margin: 0 auto;
+            svg {
+                display: block;
+                width: 100%;
+                max-width: $cFeedbackFormIconSize;
+                height: $cFeedbackFormIconSize;
+            }
+        }
+        &__text {
+            @include paragraphs();
+            text-align: center;
+            padding: 15px 0;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 300px;
+        }
+        &__btn {
+            text-align: center;
+            .c-btn {
+                margin: 0 auto;
+                max-width: 300px;
+            }
+        }
+
+        &.--success {
+            .c-feedbackForm__status__icon {
+                svg path {
+                    fill: $feedbackSuccess;
+                }
+            }
+            .c-btn__icon svg path {
+                fill: $white;
+                stroke: $white;
+            }
+        }
+        &.--fail {
+            .c-feedbackForm__status__icon {
+                svg path {
+                    fill: $feedbackError;
+                }
+            }
+            .c-btn__icon svg path {
+                fill: $white;
+                stroke: $white;
+            }
+        }
+        &.--load {
+            .c-feedbackForm__status__icon {
+                svg {
+                    @include animation__loader;
+                }
+                svg path {
+                    fill: $feedbackLoad;
+                }
+            }
+        }
+    }
+}

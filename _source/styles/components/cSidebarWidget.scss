@@ -86,4 +86,10 @@
 			}
 		}
 	}
+
+	&.--sitcky {
+		position: sticky;
+		top: 70px;
+		z-index: 2;
+	}
 }

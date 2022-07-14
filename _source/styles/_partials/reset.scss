@@ -34,7 +34,7 @@
 }
 
 body {
-    @include scroll($bg: $white, $bar: $black2, $size: 10px);
+    @include scroll($bg: $white3, $bar: $primary, $size: 10px);
     overflow-x: hidden;
     display: block;
     min-height: 100vh;

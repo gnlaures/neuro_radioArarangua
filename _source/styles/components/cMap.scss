@@ -1,0 +1,5 @@
+.c-map {
+	@include roundedAll();
+	border: 1px solid $cardBorder;
+	overflow: hidden;
+}

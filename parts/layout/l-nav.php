@@ -62,7 +62,7 @@
     <div class="l-nav__main">
         <div class="u-container">
             <div class="l-nav__main__menu">
-                <?php $cMainMenu = array('extraClass' => '--secondary');
+                <?php $cMainMenu = array('extraClass' => '--secondary --click');
                 include('parts/components/c-mainMenu.php'); ?>
             </div>
             <div class="l-nav__main__search">

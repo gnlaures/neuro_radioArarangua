@@ -1,13 +1,7 @@
 .c-cardPodcast {
-	@include transition();
-	@include roundedAll();
-	display: flex;
-	flex-direction: row;
+	@include preset__cardBase();
 	align-items: center;
 	justify-content: space-between;
-	background: $white;
-	padding: 15px;
-	border: 1px solid $white;
 	&__title {
 		@include transition();
 		font-size: 16px;
@@ -25,7 +19,6 @@
 	}
 
 	&:hover {
-		border: 1px solid $cardBorder;
 		.c-cardPodcast {
 			&__title {
 				color: $secondaryDark;

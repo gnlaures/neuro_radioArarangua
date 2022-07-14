@@ -1,0 +1,64 @@
+.s-fullPost {
+	display: block;
+	width: 100%;
+	article {
+		display: block;
+		width: 100%;
+	}
+	article header {
+		display: block;
+		padding-bottom: 40px;
+		h1 {
+			color: $textLight;
+			font-size: 40px;
+			font-weight: $fwBold;
+			margin-bottom: 20px;
+		}
+		figure {
+			@include roundedAll();
+			overflow: hidden;
+			display: block;
+			position: relative;
+			border: 1px solid $cardBorder;
+			margin-bottom: 20px;
+			.c-tagCategory {
+				position: absolute;
+				top: 20px;
+				left: 0;
+			}
+			.figureCover, img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.c-cardArticle__infos,
+		.c-breadcrumb {
+			margin-bottom: 30px;
+		}
+	}
+	article footer {
+		padding-top: 40px;
+		.c-btn {
+			@include transforms(skewX(00deg), center);
+			.c-btn__content {
+				@include transforms(skewX(0deg), center);
+			}
+			.c-btn__icon {
+				@include flexWidth(20px);
+			}
+		}
+	}
+
+	.c-cardArticle {
+		&__figure {
+			* {
+				display: block;
+				width: 100%;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+
+

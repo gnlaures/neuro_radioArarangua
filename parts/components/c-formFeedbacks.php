@@ -5,7 +5,12 @@
         </div>
         <div class="c-feedbackForm__status__text">Feedback de sucesso!</div>
         <div class="c-feedbackForm__status__btn">
-            <a href="#" class="c-btn --stroke --gray u-ttu">Enviar outro e-mail</a>
+            <a href="#" class="c-btn --m --primary">
+                <div class="c-btn__content">
+                    <i class="c-btn__icon"><?php include('media/img/icons/icon_mail.svg');?></i>
+                    <span class="c-btn__caption">Enviar outro e-mail</span>
+                </div>
+            </a>
         </div>
     </div>
     <div class="c-feedbackForm__status --fail u-dnone">
@@ -14,7 +19,11 @@
         </div>
         <div class="c-feedbackForm__status__text">Feedback de erro!</div>
         <div class="c-feedbackForm__status__btn">
-            <a href="#" class="c-btn --stroke --gray u-ttu">Tentar Novamente</a>
+            <a href="#" class="c-btn --m --secondary">
+                <div class="c-btn__content">
+                    <span class="c-btn__caption">Tentar Novamente</span>
+                </div>
+            </a>
         </div>
     </div>
     <div class="c-feedbackForm__status --load u-dnone">

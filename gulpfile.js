@@ -34,19 +34,12 @@ function gulpJS() {
     return gulp
         .src([
             '_source/scripts/_partials/utilities.js',
-            '_source/scripts/modal/mModal.js',
-            '_source/scripts/components/cLanguages.js',
             '_source/scripts/components/cForm.js',
             '_source/scripts/components/cHamburguer.js',
             '_source/scripts/components/cResponsiveGrid.js',
             '_source/scripts/components/cSmartMenu.js',
-            '_source/scripts/components/cToggleList.js',
-            '_source/scripts/components/cCardGrout.js',
-            '_source/scripts/components/cDefaultSlider.js',
-            '_source/scripts/components/cSearchProduct.js',
+            '_source/scripts/components/cTab.js',
             '_source/scripts/layout/lNav.js',
-            '_source/scripts/layout/lFullBanner.js',
-            '_source/scripts/sections/sFindUs.js'
         ])
         .pipe(concat('scripts-min.js'))
         .pipe(
@@ -66,7 +59,6 @@ function pluginJS() {
             '_source/libraries/aos/aos.js',
             '_source/libraries/isjs/is.min.js',
             '_source/libraries/fancybox/jquery.fancybox.min.js',
-            '_source/libraries/swiper/swiper.min.js',
         ])
         .pipe(concat('libraries-min.js'))
         .pipe(uglify())
@@ -77,7 +69,6 @@ function pluginCSS() {
     return gulp
         .src([
             '_source/libraries/fancybox/jquery.fancybox.min.css',
-            '_source/libraries/swiper/swiper.min.css',
             '_source/libraries/aos/aos.css',
         ])
         .pipe(concat('libraries-min.css'))

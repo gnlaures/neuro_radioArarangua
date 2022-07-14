@@ -1,0 +1,30 @@
+.c-cardAddress {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	&__icon {
+		@include flexWidth(30px);
+		* {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__content {
+		padding-left: 10px;
+		* {
+			color: $text;
+		}
+		h5 {
+			font-weight: $fwBold;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 15px;
+		}
+		p {
+			font-weight: $fwSemiBold;
+			font-size: 16px;
+		}
+	}
+}

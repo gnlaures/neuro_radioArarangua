@@ -2,9 +2,10 @@
 	padding: 40px 0;
 	&__content {
 		flex: 1 1 auto;
+		max-width: 830px;
 		padding-right: 30px;
 		.s-defaultSection {
-			margin-bottom: 30px;
+			margin-bottom: $sectionsGAP;
 			&:last-of-type {
 				margin-bottom: 0;
 			}
@@ -12,5 +13,6 @@
 	}
 	&__aside {
 		@include flexWidth(360px);
+		display: flex;
 	}
 }

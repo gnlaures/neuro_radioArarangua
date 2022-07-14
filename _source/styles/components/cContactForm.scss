@@ -1,7 +1,0 @@
-@media screen and (max-width: 640px) {
-	.c-contactForm {
-		.c-form__fieldsHero > .c-form__field {
-			@include flexWidth(100% !important)
-		}
-	}
-}

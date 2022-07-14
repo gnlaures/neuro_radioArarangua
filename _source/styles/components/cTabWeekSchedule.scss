@@ -1,0 +1,107 @@
+.c-tab {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	&__header {
+		position: sticky;
+		top: 70px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 15px;
+		ul {
+			@include scroll($bg: $gray, $bar: $primary, $size: 10px, $radius: $defaultRadius);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			max-width: 100%;
+			overflow-x: auto;
+			padding-bottom: 15px;
+			li {
+				background: $white2;
+				border-top: 1px solid $secondary;
+				border-bottom: 1px solid $secondary;
+				display: flex;
+				&:first-of-type {
+					border-top-left-radius: $defaultRadius;
+					border-bottom-left-radius: $defaultRadius;
+					border-left: 1px solid $secondary;
+				}
+				&:last-child {
+					border-top-right-radius: $defaultRadius;
+					border-bottom-right-radius: $defaultRadius;
+					border-right: 1px solid $secondary;
+				}
+			}
+			span {
+				@include transition();
+				@include roundedAll();
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: $fwBold;
+				text-transform: uppercase;
+				text-align: center;
+				padding: 5px 25px;
+				min-height: 56px;
+				cursor: pointer;
+				border: 1px solid transparent;
+				&:hover {
+					background: $primary;
+					color: $white;
+				}
+				&.is-active {
+					background: $secondary;
+					color: $white;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+	&__hero {
+		&__content {
+			display: none;
+			width: 100%;
+			&.is-active {
+				display: block;
+			}
+		}
+	}
+}
+
+.c-tabWeekSchedule {
+	&__list {
+		> li {
+			@include roundedAll();
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 15px;
+			&:nth-child(odd) {
+				background: $white;
+			}
+		}
+	}
+	&__col {
+		display: block;
+		flex: 1 1 auto;
+	}
+
+	.u-iconWithCaption {
+		span {
+			font-weight: $fwSemiBold;
+			font-size: 16px;
+			color: $text;
+		}
+	}
+	h5 {
+		@include paragraphs($fs: 16px, $fw: $fwBold);
+	}
+	p {
+		@include paragraphs($fs: 16px);
+	}
+}

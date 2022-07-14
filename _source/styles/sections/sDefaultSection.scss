@@ -7,10 +7,15 @@
 	&__content {
 		display: block;
 		width: 100%;
-		> .c-responsiveGrid {
-			@include calcWidthForPositionNegative(-6px);
-			> li {
-				padding: 6px;
+
+		.c-btn {
+			width: 100%;
+		}
+
+		> * {
+			margin-bottom: $sectionContentGAP;
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 	}

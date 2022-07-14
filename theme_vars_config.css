@@ -19,6 +19,7 @@
     --black: #000000;
     --black2: #191919;
     --black3: #2d2d2d;
+    --neurodigital: #f60;
 
     /* text colors */
     --text: #323F4B;
@@ -26,9 +27,9 @@
     --placeholderText: rgba(78, 78, 78, 0.75);
 
     /* form colors */
-    --feedbackSuccess: #000;
-    --feedbackLoad: #5f5f5f;
-    --feedbackError: #f05555;
+    --feedbackSuccess: var(--primary);
+    --feedbackLoad: var(--gray2);
+    --feedbackError: #ab2e45;
 
     /* radio status colors */
     --radioOff: #B81800;
@@ -53,10 +54,12 @@
 
     /* sizes */
     --containerPadding: 20px;
-    --containerWidth: 1210px;
+    --containerWidth: 1230px;
     --containerBigWidth: 1440px;
     --maxRowWidth: 1700px;
     --defaultRadius: 10px;
+    --sectionContentGAP: 30px;
+    --sectionsGAP: 45px;
 
     /* fonts */
     --fontFamily__default: 'Open Sans', sans-serif;

@@ -1,0 +1,22 @@
+.c-downloadApps {
+	@include calcWidthForPositionNegative(-5px);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	> li {
+		padding: 5px;
+		a {
+			@include transition();
+			@include opacity(1);
+			&:hover {
+				@include opacity(0.9);
+			}
+		}
+		img {
+			display: block;
+			height: 48px;
+			width: auto;
+			object-fit: contain;
+		}
+	}
+}

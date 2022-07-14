@@ -3,6 +3,110 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+
+    // paddings
+    &.--pad1 {
+        @include calcWidthForPositionNegative(-1px);
+        > li {
+            padding: 1px;
+        }
+    }
+    &.--pad2 {
+        @include calcWidthForPositionNegative(-2px);
+        > li {
+            padding: 2px;
+        }
+    }
+    &.--pad3 {
+        @include calcWidthForPositionNegative(-3px);
+        > li {
+            padding: 3px;
+        }
+    }
+    &.--pad4 {
+        @include calcWidthForPositionNegative(-4px);
+        > li {
+            padding: 4px;
+        }
+    }
+    &.--pad5 {
+        @include calcWidthForPositionNegative(-5px);
+        > li {
+            padding: 5px;
+        }
+    }
+    &.--pad6 {
+        @include calcWidthForPositionNegative(-6px);
+        > li {
+            padding: 6px;
+        }
+    }
+    &.--pad7 {
+        @include calcWidthForPositionNegative(-7px);
+        > li {
+            padding: 7px;
+        }
+    }
+    &.--pad8 {
+        @include calcWidthForPositionNegative(-8px);
+        > li {
+            padding: 8px;
+        }
+    }
+    &.--pad9 {
+        @include calcWidthForPositionNegative(-9px);
+        > li {
+            padding: 9px;
+        }
+    }
+    &.--pad10 {
+        @include calcWidthForPositionNegative(-10px);
+        > li {
+            padding: 10px;
+        }
+    }
+    &.--pad15 {
+        @include calcWidthForPositionNegative(-15px);
+        > li {
+            padding: 15px;
+        }
+    }
+    &.--pad20 {
+        @include calcWidthForPositionNegative(-20px);
+        > li {
+            padding: 20px;
+        }
+    }
+    &.--pad25 {
+        @include calcWidthForPositionNegative(-25px);
+        > li {
+            padding: 25px;
+        }
+    }
+    &.--pad30 {
+        @include calcWidthForPositionNegative(-30px);
+        > li {
+            padding: 30px;
+        }
+    }
+
+    // content 100%
+    &.--fitContent {
+        > li {
+            display: flex;
+        }
+    }
+
+    // spacer
+    &.--spacers {
+        > li {
+            border-bottom: 1px solid $gray;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    // widths cols
     &.--col12 {> li {@extend .u-fw8;}}
     &.--col11 {> li {@extend .u-fw9;}}
     &.--col10 {> li {@extend .u-fw10;}}
@@ -21,6 +125,7 @@
         }
     }
 
+    // align
     &.--start {
         justify-content: flex-start;
     }
