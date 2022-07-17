@@ -10,7 +10,7 @@
     </div>
     <div class="s-defaultSection__content">
         <ul class="c-responsiveGrid --start --pad10"
-            data-maxw-breaks="400"
+            data-maxw-breaks="1080"
             data-maxw-cols="1"
             data-cols-init="2">
             <li>

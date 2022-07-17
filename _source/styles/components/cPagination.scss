@@ -4,8 +4,6 @@
 	justify-content: center;
 	> li {
 		padding: 5px;
-	}
-	&__page {
 		&:first-of-type {
 			margin-right: 5px;
 		}
@@ -30,5 +28,28 @@
 		&.--stroke {
 			border-width: 2px;
 		}
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.c-pagination>li {
+		padding: 2px;
+	}
+	.c-pagination>li:first-of-type{
+		margin-right: 0;
+	}
+	.c-pagination>li:last-of-type {
+		margin-left: 0;
+	}
+	.c-pagination .c-btn__content {
+		padding: 0 5px !important;
+	}
+}
+@media screen and (max-width: 420px) {
+	.c-pagination .c-btn__content {
+		padding: 0 2px !important;
+	}
+	.c-pagination .c-btn.--s .c-btn__caption {
+		font-size: 12px;
 	}
 }

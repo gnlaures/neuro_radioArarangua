@@ -51,3 +51,21 @@
 		}
 	}
 }
+@media screen and (max-width: 780px) {
+	.c-columnistResume {
+		width: 100%;
+		max-width: 580px;
+	}
+	.c-columnistResume__head {
+		display: block;
+		figure {
+			margin: 0 auto;
+		}
+		div {
+			padding-top: 30px;
+			padding-left: 0;
+		}
+	}
+	.c-columnistResume__content {
+	}
+}

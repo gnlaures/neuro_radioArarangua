@@ -25,6 +25,10 @@
     i {
         font-style: italic;
     }
+
+    @media screen and (max-width: 780px) {
+        font-size: $fs - 3 is-important($important);
+    }
 }
 
 @mixin labels (

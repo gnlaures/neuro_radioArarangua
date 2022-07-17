@@ -1,4 +1,4 @@
-<div class="c-contactForm">
+<div class="c-jobsForm">
     <form action="#" class="c-form" id="jobsForm">
         <div class="c-form__hero">
             <div class="c-form__group u-fw100">
@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="c-form__group u-fw50">
+            <div class="c-form__group u-fw50 --last">
                 <div class="c-form__field">
                     <div class="c-field --confirmRead">
                         <input type="checkbox" id="jobsForm__privacy">

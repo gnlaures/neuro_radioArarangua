@@ -63,3 +63,29 @@
 		}
 	}
 }
+
+@media screen and (max-width: 520px) {
+	.c-shareOptions {
+		.c-socialList {
+			@include transforms(skewX(00deg), center);
+			li {
+				@include transforms(skewX(00deg), center);
+			}
+			.c-btnIcon {
+				@include transforms(skewX(00deg), center);
+				svg {
+					@include transforms(skewX(00deg), center);
+				}
+			}
+		}
+		&:hover {
+			.c-socialList {
+				width: 100%;
+				left: 0;
+				padding: 58px 10px 10px 10px;
+				height: auto;
+				justify-content: center;
+			}
+		}
+	}
+}

@@ -21,7 +21,7 @@
                 <li><a href="noticia-open">Notícia - Open</a></li>
                 <li><a href="podcasts">Podcasts</a></li>
                 <li><a href="videos">Vídeos</a></li>
-                <li><a href="post">Post</a></li>
+                <li><a href="noticia-open">Post</a></li>
                 <li><a href="previsao-do-tempo">Previsão do Tempo</a></li>
                 <li><a href="error">404</a></li>
                 <li>

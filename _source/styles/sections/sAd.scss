@@ -1,3 +1,8 @@
 .s-ad {
 	padding-top: 40px;
 }
+@media screen and (max-width: 880px) {
+	.s-ad {
+		padding-top: 20px;
+	}
+}

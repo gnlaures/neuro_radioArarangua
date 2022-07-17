@@ -14,7 +14,10 @@
             <p>A Rádio Araranguá é a principal voz da comunidade, com um jornalismo atuante e  apresentando mais de 12 horas por dia com conteúdos e informações políticas, econômicas, sociais, religiosas, esportivas e de entretenimento.</p>
             <p><strong class="u-color-primary">Rádio Araranguá FM 95.5: A informação em primeiro lugar!</strong></p>
             <figure>
-                <img src="media/img/content/cardArticle.jpg" alt="Texto Alternativo">
+                <a href="media/img/content/cardArticle.jpg" data-fancybox="post-images">
+                    <img src="media/img/content/cardArticle.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, impedit.">
+                </a>
+                <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, impedit.</figcaption>
             </figure>
         </div>
     </div>
@@ -31,8 +34,8 @@
     </div>
     <div class="s-defaultSection__content">
         <ul class="c-responsiveGrid --start --fitContent --pad7"
-            data-maxw-breaks="500"
-            data-maxw-cols="2"
+            data-maxw-breaks="760"
+            data-maxw-cols="1"
             data-cols-init="2">
             <li>
                 <?php

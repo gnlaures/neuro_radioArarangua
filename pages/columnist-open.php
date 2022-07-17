@@ -30,7 +30,7 @@
     </div>
     <div class="s-defaultSection__content">
         <ul class="c-responsiveGrid --start --fitContent --pad10"
-            data-maxw-breaks="500"
+            data-maxw-breaks="780"
             data-maxw-cols="2"
             data-cols-init="3">
             <li>

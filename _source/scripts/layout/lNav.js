@@ -55,15 +55,6 @@
                 navElement.removeClass('is-hidden');
                 navElement.removeClass('is-middle');
             }
-            // scroll up or down
-            if (scrollBody < 0) {
-                navElement.removeClass('is-hidden');
-                navElement.addClass('is-scrolledUp');
-                navElement.removeClass('is-scrolledDown');
-            } else {
-                navElement.removeClass('is-scrolledUp');
-                navElement.addClass('is-scrolledDown');
-            }
             // close menus on hidden nav
             if (navElement.hasClass('is-hidden')) {
                 closeAllNavElements();

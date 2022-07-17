@@ -5,3 +5,13 @@
     width: 100%;
     padding-top: 182px;
 }
+@media screen and (max-width: 1140px) {
+    .l-page {
+        padding-top: 128px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .l-page {
+        padding-top: 100px;
+    }
+}

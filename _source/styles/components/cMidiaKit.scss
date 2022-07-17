@@ -25,3 +25,20 @@
 		}
 	}
 }
+
+@media screen and (max-width: 640px) {
+	.c-midiaKit {
+		flex-wrap: wrap;
+	}
+	.c-midiaKit__content {
+		@include flexWidth(100%);
+		padding-right: 0;
+		padding-bottom: 20px;
+	}
+	.c-midiaKit__cta {
+		@include flexWidth(100%);
+		.c-btn {
+			max-width: 240px;
+		}
+	}
+}

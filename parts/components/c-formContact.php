@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="c-form__group u-fw50">
+            <div class="c-form__group u-fw50 --last">
                 <div class="c-form__field">
                     <div class="c-field --select">
                         <label for="#">Assunto</label>

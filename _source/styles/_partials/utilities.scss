@@ -37,7 +37,7 @@
 // flex
 .u-wrap {flex-wrap: wrap;}
 .u-nowrap {flex-wrap: nowrap;}
-.u-wrapRev {flex-wrap: wrap-reverse;}
+.u-wrapRev {flex-wrap: wrap-reverse !important;}
 .u-jcfe {justify-content: flex-end;}
 .u-jcfs {justify-content: flex-start;}
 .u-jcsb {justify-content: space-between;}

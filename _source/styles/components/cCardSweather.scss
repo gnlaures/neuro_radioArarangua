@@ -196,3 +196,35 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1180px) {
+	.c-listSweather li {
+		border-bottom-color: rgba(255,255,255,0.25);
+	}
+	.c-cardSweather.--fixedSizes .c-cardSweather__temp {
+		@include flexWidth(42px)
+	}
+	.c-cardSweather__icon,
+	.c-cardSweather__rain i{
+		@include flexWidth(25px);
+		svg {
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.c-cardSweather__temp span.caption {
+		font-size: 10px;
+	}
+	.c-cardSweather__temp span.temp {
+		font-size: 20px;
+	}
+	.c-cardSweather__rain span {
+		font-size: 16px;
+	}
+	.c-cardSweather__city {
+		font-size: 16px;
+	}
+	.c-cardSweather {
+
+	}
+}

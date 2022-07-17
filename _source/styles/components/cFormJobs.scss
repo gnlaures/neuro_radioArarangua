@@ -1,0 +1,12 @@
+@media screen and (max-width: 980px) {
+	.c-jobsForm {
+		.c-form__group,
+		.c-form__field {
+			@include flexWidth(100%);
+		}
+
+		.c-form__group.--last {
+			order: 2;
+		}
+	}
+}

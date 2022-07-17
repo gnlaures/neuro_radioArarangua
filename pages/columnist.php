@@ -9,9 +9,9 @@
         </div>
     </div>
     <div class="s-defaultSection__content">
-        <ul class="c-responsiveGrid --start --spacers --pad25"
-            data-maxw-breaks="400"
-            data-maxw-cols="1"
+        <ul class="c-responsiveGrid --start --pad25"
+            data-maxw-breaks="1180, 780, 740"
+            data-maxw-cols="1, 2, 1"
             data-cols-init="2">
             <li>
                 <?php
@@ -95,8 +95,8 @@
     </div>
     <div class="s-defaultSection__content">
         <ul class="c-responsiveGrid --start --fitContent --pad10"
-            data-maxw-breaks="400"
-            data-maxw-cols="1"
+            data-maxw-breaks="1140, 480"
+            data-maxw-cols="2, 1"
             data-cols-init="3">
             <li>
                 <?php
