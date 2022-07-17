@@ -14,6 +14,7 @@
 		display: block;
 		width: 100%;
 	}
+
 	&.--mainMenu {
 		ul {
 			display: flex;
@@ -75,5 +76,23 @@
 	}
 	&.--neurodigital {
 		@include calcWidthForPositionNegative(-15px);
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.c-footerWidget.--mainMenu ul {
+		display: block;
+		li {
+			margin-right: 0;
+			margin-bottom: 15px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.c-footerWidget.--contactUs {
+		address {
+			font-size: 16px;
+		}
 	}
 }

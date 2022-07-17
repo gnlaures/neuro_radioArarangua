@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="l-footer__row --mainMenu">
-        <div class="u-container u-dflex u-jcsb u-aic">
+        <div class="u-container u-dflex u-jcsb u-aic u-wrapRev">
             <div class="l-footer__col">
                 <div class="c-footerWidget --mainMenu">
                     <div class="c-footerWidget__content">
@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="l-footer__row --contactUs">
-        <div class="u-container u-dflex u-jcsb u-aic">
+        <div class="u-container u-dflex u-jcsb u-aic u-wrap">
             <div class="l-footer__col">
                 <div class="c-footerWidget --address">
                     <div class="c-footerWidget__header"><h4>Endereço</h4></div>
@@ -50,7 +50,6 @@
             </div>
             <div class="l-footer__col">
                 <div class="c-footerWidget --phones">
-                    <div class="c-footerWidget__header"><h4 class="u-color-secondary">Contate-nos</h4></div>
                     <div class="c-footerWidget__content">
                         <ul class="c-listBtns u-jcfe --pad10">
                             <li>

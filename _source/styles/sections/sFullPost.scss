@@ -63,8 +63,47 @@
 @media screen and (max-width: 780px) {
 	.s-fullPost article {
 		header {
+			padding-bottom: 25px;
+			figure {
+				.c-tagCategory {
+					display: none;
+				}
+			}
 			h1 {
 				font-size: 24px;
+			}
+			> .c-shareOptions {
+				display: none;
+			}
+			.c-cardArticle__infos {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.s-fullPost__mobileSubInfos {
+		@include calcWidthForPositionNegative(-20px);
+		display: flex !important;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: $containerPadding;
+		padding-bottom: 15px;
+		.c-shareOptions {
+			> .c-btn {
+				display: none;
+			}
+			> .c-socialList {
+				@include opacity(1);
+				display: flex !important;
+				left: 0;
+				padding: 0;
+				height: auto;
+				position: relative;
+				background: transparent;
+				@include transforms(skewX(10deg), center);
+				> li {
+					@include transforms(skewX(-10deg), center);
+				}
 			}
 		}
 	}

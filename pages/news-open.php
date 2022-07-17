@@ -8,6 +8,10 @@
                     <img src="media/img/content/cardArticle.jpg" alt="Carnês do IPTU de Maracajá já estão sendo entregues nas residências">
                 </a>
             </figure>
+            <div class="s-fullPost__mobileSubInfos u-dnone">
+                <a href="#" class="c-tagCategory"><span>Polícia</span></a>
+                <?include('parts/components/c-shareOptions.php');?>
+            </div>
             <h1>Carnês do IPTU de Maracajá já estão sendo entregues nas residências</h1>
             <div class="c-cardArticle__infos">
                 <div class="c-cardArticle__infos__user">

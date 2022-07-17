@@ -1,6 +1,5 @@
 .l-footer {
     display: block;
-    display: none;
     width: 100%;
     background: $secondary;
     padding-bottom: 30px;
@@ -54,5 +53,57 @@
     &__row {
         display: block;
         margin-top: 50px;
+    }
+
+    .c-socialList,
+    .c-listBtns {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .l-footer__tagline__brand {
+        &:before {
+            display: none;
+        }
+        &:after {
+            width: 40px;
+            right: -20px;
+            left: inherit;
+            background: $secondary;
+        }
+    }
+}
+@media screen and (max-width: 860px) {
+    .l-footer {
+        &__tagline {
+            margin-bottom: 20px;
+        }
+        &__row {
+            margin-top: 0;
+        }
+        &__col {
+            @include flexWidth(100%);
+            margin-top: 30px;
+        }
+    }
+}
+@media screen and (max-width: 570px) {
+    .l-footer__tagline {
+        .u-container {
+            padding: 0 10px;
+        }
+    }
+    .l-footer__tagline__caption {
+        padding-right: 15px;
+        span {
+            font-size: 14px;
+        }
+    }
+    .l-footer__tagline__brand {
+        @include flexWidth(105px);
+        img {
+            top: -7px;
+        }
     }
 }
